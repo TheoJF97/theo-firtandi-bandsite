@@ -1,0 +1,86 @@
+// FONT FAMILIES
+@font-face {
+  font-family: "Avenir Next Regular";
+  font-weight: 400;
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("woff2");
+}
+
+@font-face {
+  font-family: "Avenir Next Demi";
+  font-weight: 600;
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("woff2");
+}
+
+@font-face {
+  font-family: "Avenir Next Bold";
+  font-weight: 700;
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("woff2");
+}
+
+// MOBILE FONT AND TEXT STYLES
+@mixin mobile-page-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Next Demi";
+}
+
+@mixin mobile-section-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Next Demi";
+}
+
+@mixin mobile-sub-header {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Next Demi";
+}
+@mixin mobile-body-copy {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@mixin mobile-footer-copy {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@mixin mobile-labels-buttons {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+// DESKTOP + TABLET FONT AND TEXT STYLES
+@mixin desktop-tablet-page-header {
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-weight: 700;
+}
+
+@mixin desktop-tablet-section-header {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+
+@mixin desktop-tablet-sub-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@mixin desktop-tablet-body-copy {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+@mixin desktop-tablet-footer-copy {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+@mixin desktop-tablet-labels-buttons {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}

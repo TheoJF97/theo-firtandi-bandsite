@@ -1,0 +1,39 @@
+@use "./variables" as *;
+
+// BREAKPOINTS
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+
+//PADDING -- MOBILE
+@mixin padding-mobile-headline {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+@mixin padding-mobile-component {
+  padding: 0 1rem;
+}
+
+//PADDING -- DESKTOP/TABLET
+@mixin padding-desktop-tablet-headline {
+  padding-top: 3rem;
+  padding-bottom: 2.25rem;
+}
+
+@mixin padding-tablet-about {
+  padding: 0 3.75rem;
+}
+
+@mixin padding-desktop-tablet-component {
+  padding: 0 2.25rem;
+}
