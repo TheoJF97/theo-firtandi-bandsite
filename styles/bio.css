@@ -24,12 +24,12 @@
 }
 
 .divider-line {
+  border: 1px solid #e1e1e1;
   margin: 1rem 0;
 }
 
 .hero {
   width: 100%;
-  height: 28vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -43,7 +43,6 @@
 }
 .hero__title {
   color: #ffffff;
-  padding: 0 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir Next Demi";
@@ -61,11 +60,39 @@
   align-items: center;
   width: 100%;
   height: 28vh;
-  background-color: rgba(50, 50, 50, 0.5);
+  background: rgba(50, 50, 50, 0.5);
 }
 @media screen and (min-width: 768px) {
   .hero-img-overlay {
     height: 80vh;
+  }
+}
+
+.comment__button,
+.shows__buy {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  background-color: #323232;
+  color: #ffffff;
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment__button:hover,
+.shows__buy:hover {
+  background-color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .comment__button,
+  .shows__buy {
+    max-width: 150px;
+    padding: 0 32px;
   }
 }
 
@@ -332,6 +359,10 @@
 
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
+  height: 28vh;
+}
+.hero-img-overlay {
+  height: 28vh;
 }
 
 .about {
@@ -545,7 +576,7 @@
   gap: 5px;
 }
 
-.comment-pfp {
+.comment-avatar {
   width: 36px;
   height: 36px;
   background-color: #e1e1e1;
@@ -555,54 +586,63 @@
   flex: none;
 }
 @media screen and (min-width: 768px) {
-  .comment-pfp {
+  .comment-avatar {
     width: 48px;
     height: 48px;
   }
 }
 
-.form-input,
+.input-form,
 .comment-content {
   display: flex;
   flex-direction: column;
 }
 
-.comment-content-header {
+.comment-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.comment-input__label {
+.input__label {
   text-transform: uppercase;
   color: #afafaf;
+  margin: 0;
+  font-size: 12px;
+  padding: 7px 0;
+}
+
+.input__name {
+  height: 2px;
+  width: 84%;
+  border-radius: 4px;
+  padding: 18px;
+  border: 1px solid #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .input__name {
+    height: 48px;
+    padding: 16px;
+  }
+}
+.input__name:focus {
+  border-color: #323232;
+}
+.input__name:invalid {
+  border-color: #d22d2d;
 }
 
 .comment-input-comment {
   color: #323232;
 }
 
-.comment-name-input {
-  height: 2px;
-  width: 100%;
-  border-radius: 4px;
-  padding: 18px;
-  border: 1px solid #e1e1e1;
-}
-@media screen and (min-width: 768px) {
-  .comment-name-input {
-    height: 48px;
-    padding: 16px;
-  }
-}
-.comment-name-input:focus {
-  border-color: #323232;
-}
-.comment-name-input:invalid {
-  border-color: #d22d2d;
+.comment-name {
+  margin: 0;
+  color: #323232;
+  font-weight: bold;
 }
 
-.comment-new-input {
+.input-comment {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-weight: 700;
@@ -612,37 +652,10 @@ label {
   margin: 4px;
 }
 
-.comment__button {
-  background-color: #323232;
-  color: #ffffff;
-  height: 40px;
-  width: 100%;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-.comment__button:hover {
-  background-color: #000000;
-}
-@media screen and (min-width: 768px) {
-  .comment__button {
-    max-width: 150px;
-    padding: 0 32px;
-  }
-}
-
-.comment-name {
-  color: #323232;
-  font-weight: bold;
-}
-
 .comment-msg {
   color: #323232;
 }
 
 .comment-date {
   color: #afafaf;
-}
-
-.divider-line {
-  border: 1px solid #e1e1e1;
 }/*# sourceMappingURL=bio.css.map */

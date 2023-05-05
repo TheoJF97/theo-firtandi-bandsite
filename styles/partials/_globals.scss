@@ -13,13 +13,13 @@
 }
 
 .divider-line {
+  border: 1px solid $secondary-mercury;
   margin: 1rem 0;
 }
 
 //HERO
 .hero {
   width: 100%;
-  height: 28vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -30,7 +30,6 @@
   }
   &__title {
     color: $primary-white;
-    @include padding-mobile-component;
     @include mobile-page-header;
     @include tablet {
       @include padding-desktop-tablet-component;
@@ -42,9 +41,32 @@
     align-items: center;
     width: 100%;
     height: 28vh;
-    background-color: rgba(50, 50, 50, 0.5);
+    background: rgba(50, 50, 50, 0.5);
     @include tablet {
       height: 80vh;
     }
+  }
+}
+
+//button
+.comment__button,
+.shows__buy {
+  @include mobile-labels-buttons;
+  font-size: 0.9375rem;
+  background-color: $primary-black;
+  color: $primary-white;
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: $secondary-darkblack;
+  }
+  @include tablet {
+    max-width: 150px;
+    padding: 0 32px;
   }
 }

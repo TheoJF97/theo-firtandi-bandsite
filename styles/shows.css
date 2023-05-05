@@ -24,12 +24,12 @@
 }
 
 .divider-line {
+  border: 1px solid #e1e1e1;
   margin: 1rem 0;
 }
 
 .hero {
   width: 100%;
-  height: 28vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -43,7 +43,6 @@
 }
 .hero__title {
   color: #ffffff;
-  padding: 0 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir Next Demi";
@@ -61,11 +60,39 @@
   align-items: center;
   width: 100%;
   height: 28vh;
-  background-color: rgba(50, 50, 50, 0.5);
+  background: rgba(50, 50, 50, 0.5);
 }
 @media screen and (min-width: 768px) {
   .hero-img-overlay {
     height: 80vh;
+  }
+}
+
+.comment__button,
+.shows__buy {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  background-color: #323232;
+  color: #ffffff;
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment__button:hover,
+.shows__buy:hover {
+  background-color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .comment__button,
+  .shows__buy {
+    max-width: 150px;
+    padding: 0 32px;
   }
 }
 
@@ -332,10 +359,16 @@
 
 .hero {
   background-image: url(../assets/images/hero-shows.jpg);
+  height: 38vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+.hero-img-overlay {
+  height: 38vh;
 }
 .hero__album-title {
   color: #ffffff;
-  padding: 0 1rem;
+  padding-left: 1rem;
   font-size: 0.8125rem;
   line-height: 1.375rem;
   font-family: "Avenir Next Demi";
@@ -348,9 +381,15 @@
     font-weight: 700;
   }
 }
+.hero__title {
+  width: 71%;
+  margin-top: 0;
+  padding-left: 1rem;
+}
 .hero__soundcloud {
-  width: 100%;
+  width: 91%;
   height: 119px;
+  padding-left: 1rem;
 }
 .hero-content {
   display: flex;
@@ -359,9 +398,28 @@
 }
 
 .shows {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 .shows__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Next Demi";
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.shows__date-header,
+.shows__venue-header,
+.shows__location-header {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #afafaf;
+}
+
+.shows__date {
+  font-weight: bold;
 }/*# sourceMappingURL=shows.css.map */

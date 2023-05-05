@@ -8,18 +8,30 @@
 // HERO
 .hero {
   background-image: url(../assets/images/hero-shows.jpg);
+  height: 38vh;
+  width: 100%;
+  box-sizing: border-box;
+  &-img-overlay {
+    height: 38vh;
+  }
   &__album-title {
     color: $primary-white;
-    @include padding-mobile-component;
+    padding-left: 1rem;
     @include mobile-sub-header;
     @include tablet {
       @include padding-desktop-tablet-component;
       @include desktop-tablet-page-header;
     }
   }
+  &__title {
+    width: 71%;
+    margin-top: 0;
+    padding-left: 1rem;
+  }
   &__soundcloud {
-    width: 100%;
+    width: 91%;
     height: 119px;
+    padding-left: 1rem;
   }
   &-content {
     display: flex;
@@ -30,8 +42,23 @@
 
 //SHOWS
 .shows {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   &__title {
+    @include mobile-section-header;
     @include padding-mobile-headline;
+    padding-bottom: 0;
+    margin-top: 0;
   }
+}
+
+.shows__date-header,
+.shows__venue-header,
+.shows__location-header {
+  @include mobile-labels-buttons;
+  font-size: 0.75rem;
+  color: $primary-silver;
+}
+
+.shows__date {
+  font-weight: bold;
 }
