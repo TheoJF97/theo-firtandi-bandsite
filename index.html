@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- JS REFERENCING -->
-    <script src="./scripts/index-page.js"></script>    
+    <script src="./scripts/index-page.js" defer></script>
     <!-- CSS REFERENCING -->
     <link rel="stylesheet" href="./styles/bio.css" />
     <title>BandSite: Bio</title>
@@ -135,8 +135,95 @@
       </div>
     </section>
 
+    <!-- JOIN THE CONVERSATION -->
+    <section class="comment">
+      <h2 class="comment__title">Join the Conversation</h2>
+
+      <!-- FORM -->
+      <form class="comment-form">
+        <img
+          src="./assets/images/Mohan-muruge.jpg"
+          alt="user-mohan"
+          class="circle"
+        />
+        <div class="form-input">
+          <h4 class="comment-input__label">name</h4>
+          <input
+            type="text"
+            name="userName"
+            id="name"
+            class="comment-name-input"
+            placeholder="Enter your name"
+          /> 
+          <h4 class="comment-input__label">comment</h4>
+          <textarea
+            name="userComment"
+            id="userComment"
+            class="comment-new-input"
+            cols="40"
+            rows="5"
+            placeholder="Add a new comment"
+          >
+          </textarea>
+          <button type="submit" class="comment__button">COMMENT</button>
+        </div>
+      </form>
+
+      <!-- USERS' COMMENTS SECTION -->
+      <div class="divider-line"></div>
+
+      <div class="comment-box">
+        <div class="comment-pfp"></div>
+        <div class="comment-content">
+          <div class="comment-content-header">
+            <p class="comment-name">Connor Walton</p>
+            <span class="comment-date">2/17/2021</span>
+          </div>
+          <p class="comment-msg">
+            This is art. This is inexplicable magic expressed in the purest way,
+            everything that makes up this majestic work deserves reverence. Let
+            us appreciate this for what it is and what it contains.
+          </p>
+        </div>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <div class="comment-box">
+        <div class="circle"></div>
+        <div class="comment-content">
+          <div class="comment-content-header">
+            <p class="comment-name">Emilie Beach</p>
+            <span class="comment-date">01/09/2021</span>
+          </div>
+          <p class="comment-msg">
+            I feel blessed to have seen them in person. What a show! They were
+            just perfection. If there was one day of my life I could relive,
+            this would be it. What an incredible day.
+          </p>
+        </div>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <div class="comment-box">
+        <div class="circle"></div>
+        <div class="comment-content">
+          <div class="comment-content-header">
+            <p class="comment-name">Miles Acosta</p>
+            <span class="comment-date">12/20/2020</span>
+          </div>
+          <p class="comment-msg">
+            I can't stop listening. Every time I hear one of their songs - the
+            vocals - it gives me goosebumps. Shivers straight down my spine.
+            What a beautiful expression of creativity. Can't get enough.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
-    <section class="footer">
+    <footer class="footer">
       <div class="footer-large-box">
         <div class="footer-header-box">
           <h1 class="footer__cta">Get in Touch</h1>
@@ -222,6 +309,6 @@
       <p class="footer__copyright">
         Copyright The Bees Knees © 2021 All Rights Reserved
       </p>
-    </section>
+    </footer>
   </body>
 </html>

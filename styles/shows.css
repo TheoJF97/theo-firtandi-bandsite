@@ -331,318 +331,37 @@
 }
 
 .hero {
-  background-image: url(../assets/images/hero-bio.jpg);
+  background-image: url(../assets/images/hero-shows.jpg);
 }
-
-.about {
-  padding: 0 1rem;
-}
-@media screen and (min-width: 768px) {
-  .about {
-    padding: 0 2.25rem;
-  }
-}
-.about__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "Avenir Next Demi";
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .about__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-  }
-}
-.about__quote {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
-  margin-top: 0;
-  margin-bottom: 0.3125rem;
-}
-@media screen and (min-width: 768px) {
-  .about__quote {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    padding: 0 3.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__quote {
-    width: 59%;
-    padding-bottom: 1rem;
-  }
-}
-.about__bryan {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
-}
-@media screen and (min-width: 768px) {
-  .about__bryan {
-    font-size: 1rem;
-    margin-left: 3.75rem;
-  }
-}
-.about__band-name {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
-  margin-bottom: 0;
-}
-@media screen and (min-width: 768px) {
-  .about__band-name {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-    padding: 2rem 3.75rem 0.75rem 3.75rem;
-    margin-bottom: 0;
-  }
-}
-.about-band-description {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .about-band-description {
-    flex-direction: row;
-    padding: 0 3.75rem;
-    padding-bottom: 1rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about-band-description {
-    padding-right: 7.8125rem;
-  }
-}
-.about__band-par {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  font-weight: bold;
-}
-@media screen and (min-width: 768px) {
-  .about__band-par {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 400;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .about__band-par {
-    padding-right: 5.75rem;
-  }
-}
-
-.concert__img {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .concert__img {
-    padding: 0 3.75rem;
-    width: 85%;
-  }
-}
-
-.photo-gallery {
-  background-color: #fafafa;
-  padding: 0 1rem;
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery {
-    padding: 0 2.25rem;
-  }
-}
-.photo-gallery__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "Avenir Next Demi";
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-  }
-}
-.photo-gallery-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery-box {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-.photo-gallery__img {
-  width: 100%;
-  padding-bottom: 1rem;
-  filter: grayscale(60%);
-}
-.photo-gallery__img:hover {
-  filter: grayscale(0);
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery__img {
-    width: 31%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .photo-gallery__img {
-    width: 32.3%;
-  }
-}
-
-.comment {
-  background-color: #ffffff;
-  padding: 0 1rem;
-}
-@media screen and (min-width: 768px) {
-  .comment {
-    padding: 0 2.25rem;
-  }
-}
-
-.comment__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "Avenir Next Demi";
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .comment__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    font-weight: 700;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-  }
-}
-
-.comment-form,
-.comment-box {
-  display: flex;
-  gap: 5px;
-}
-
-.comment-pfp {
-  width: 36px;
-  height: 36px;
-  background-color: #e1e1e1;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  flex: none;
-}
-@media screen and (min-width: 768px) {
-  .comment-pfp {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-.form-input,
-.comment-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.comment-content-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.comment-input__label {
-  text-transform: uppercase;
-  color: #afafaf;
-}
-
-.comment-input-comment {
-  color: #323232;
-}
-
-.comment-name-input {
-  height: 2px;
-  width: 100%;
-  border-radius: 4px;
-  padding: 18px;
-  border: 1px solid #e1e1e1;
-}
-@media screen and (min-width: 768px) {
-  .comment-name-input {
-    height: 48px;
-    padding: 16px;
-  }
-}
-.comment-name-input:focus {
-  border-color: #323232;
-}
-.comment-name-input:invalid {
-  border-color: #d22d2d;
-}
-
-.comment-new-input {
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-}
-
-label {
-  margin: 4px;
-}
-
-.comment__button {
-  background-color: #323232;
+.hero__album-title {
   color: #ffffff;
-  height: 40px;
-  width: 100%;
-  border-radius: 4px;
-  margin-top: 1rem;
-}
-.comment__button:hover {
-  background-color: #000000;
+  padding: 0 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Next Demi";
 }
 @media screen and (min-width: 768px) {
-  .comment__button {
-    max-width: 150px;
-    padding: 0 32px;
+  .hero__album-title {
+    padding: 0 2.25rem;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
   }
 }
-
-.comment-name {
-  color: #323232;
-  font-weight: bold;
+.hero__soundcloud {
+  width: 100%;
+  height: 119px;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
 }
 
-.comment-msg {
-  color: #323232;
+.shows {
+  padding: 1rem;
 }
-
-.comment-date {
-  color: #afafaf;
-}
-
-.divider-line {
-  border: 1px solid #e1e1e1;
-}/*# sourceMappingURL=bio.css.map */
+.shows__title {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}/*# sourceMappingURL=shows.css.map */

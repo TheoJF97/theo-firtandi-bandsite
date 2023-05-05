@@ -1,0 +1,81 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./globals" as *;
+@use "./fonts" as *;
+
+// HEADER + NAVBAR
+
+.header {
+  background-color: $primary-black;
+  color: $primary-white;
+}
+
+.nav-bar {
+  text-align: center;
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.nav-bar__logo {
+  padding-top: 1rem;
+  @include tablet {
+    padding: 1.875rem 1.8125rem 0 1.5rem;
+  }
+}
+
+.nav-bar-list {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.nav-bar__link {
+  width: 50%;
+  font-weight: 400;
+  &:visited,
+  &:link {
+    text-decoration: none;
+    color: $primary-white;
+  }
+}
+
+.nav-bar-box {
+  &--active {
+    border-bottom: 5px solid $primary-white;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  box-shadow: inset 0 0 0 0 $secondary-darkblack;
+  padding: 0;
+  margin: 0;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  &:hover {
+    border-bottom: 5px solid $primary-white;
+    color: $primary-white;
+    box-shadow: inset 25rem 0 0 0 $secondary-darkblack;
+  }
+}
+
+.nav-bar-item {
+  list-style-type: none;
+  @include mobile-labels-buttons;
+  font-weight: 400;
+  color: $secondary-mercury;
+  @include tablet {
+    @include desktop-tablet-labels-buttons;
+    padding: 1rem;
+  }
+  &:hover {
+    color: $primary-white;
+  }
+}
+
+.item--active {
+  font-weight: 700;
+  color: $primary-white;
+}

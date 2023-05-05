@@ -1,12 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JS REFERENCING -->
+    <script src="../scripts/build-shows-page.js" defer></script>
+    <!-- CSS REFERENCING -->
+    <link rel="stylesheet" href="../styles/shows.css" />
     <title>BandSite: Shows</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="body">
+    <!-- HEADER + NAVBAR -->
+    <header class="header">
+      <nav class="nav-bar">
+        <a href="./index.html" class="nav-bar__logo-link">
+          <img
+            src="../assets/logos/Logo-bandsite.svg"
+            alt="Bandsite-logo"
+            class="nav-bar__logo"
+          />
+        </a>
+
+        <ul class="nav-bar-list">
+          <a href="../index.html" class="nav-bar__link">
+            <div class="nav-bar-box">
+              <li class="nav-bar-item">Biography</li>
+            </div>
+          </a>
+
+          <a href="../pages/shows.html" class="nav-bar__link">
+            <div class="nav-bar-box nav-bar-box--active">
+              <li class="nav-bar-item item--active">Shows</li>
+            </div>
+          </a>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-img-overlay">
+        <div class="hero-content">
+          <h2 class="hero__album-title">Beautiful Beasts Album</h2>
+          <h1 class="hero__title">Queen of Yellow x For the Stings</h1>
+          <!-- SOUNDCLOUD API -->
+          <iframe
+            class="hero__soundcloud"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/851862580&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          >
+          </iframe>
+          <!-- <div
+          style="
+            font-size: 10px;
+            color: #cccccc;
+            line-break: anywhere;
+            word-break: normal;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+              Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+            font-weight: 100;
+          ">
+          <a
+            href="https://soundcloud.com/nn-ll"
+            title="Noreen Lardizabal"
+            target="_blank"
+            style="color: #cccccc; text-decoration: none"
+            >Noreen Lardizabal</a
+          >
+          ·
+          <a
+            href="https://soundcloud.com/nn-ll/noreen-silver-gold-cover"
+            title="Kirk Franklin - Silver &amp; Gold (Cover)"
+            target="_blank"
+            style="color: #cccccc; text-decoration: none"
+            >Kirk Franklin - Silver &amp; Gold (Cover)</a
+          >
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWS -->
+    <section class="shows">
+      <h1 class="shows__title">Shows</h1>
+      <div class="show-box">
+        <h3 class="shows__date-header">DATE</h3>
+        <p class="shows__date">Mon Sept 06 2021</p>
+        <h3 class="shows__venue-header">VENUE</h3>
+        <p class="shows__venue">Ronald Lane</p>
+        <h3 class="shows__location-header">LOCATION</h3>
+        <p class="shows__location">San Francisco, CA</p>
+        <button type="submit">BUY TICKETS</button>
+      </div>
+      <div class="divider-line"></div>
+
+      <div class="show-box">
+        <h3 class="shows__date-header">DATE</h3>
+        <p class="shows__date">Mon Sept 06 2021</p>
+        <h3 class="shows__venue-header">VENUE</h3>
+        <p class="shows__venue">Ronald Lane</p>
+        <h3 class="shows__location-header">LOCATION</h3>
+        <p class="shows__location">San Francisco, CA</p>
+        <button type="submit">BUY TICKETS</button>
+      </div>
+      <div class="divider-line"></div>
+
+      <div class="show-box">
+        <h3 class="shows__date-header">DATE</h3>
+        <p class="shows__date">Mon Sept 06 2021</p>
+        <h3 class="shows__venue-header">VENUE</h3>
+        <p class="shows__venue">Ronald Lane</p>
+        <h3 class="shows__location-header">LOCATION</h3>
+        <p class="shows__location">San Francisco, CA</p>
+        <button type="submit">BUY TICKETS</button>
+      </div>
+      <div class="divider-line"></div>
+
+      <div class="show-box">
+        <h3 class="shows__date-header">DATE</h3>
+        <p class="shows__date">Mon Sept 06 2021</p>
+        <h3 class="shows__venue-header">VENUE</h3>
+        <p class="shows__venue">Ronald Lane</p>
+        <h3 class="shows__location-header">LOCATION</h3>
+        <p class="shows__location">San Francisco, CA</p>
+        <button type="submit">BUY TICKETS</button>
+      </div>
+      <div class="divider-line"></div>
+
+      <div class="show-box">
+        <h3 class="shows__date-header">DATE</h3>
+        <p class="shows__date">Mon Sept 06 2021</p>
+        <h3 class="shows__venue-header">VENUE</h3>
+        <p class="shows__venue">Ronald Lane</p>
+        <h3 class="shows__location-header">LOCATION</h3>
+        <p class="shows__location">San Francisco, CA</p>
+        <button type="submit">BUY TICKETS</button>
+      </div>
+      <div class="divider-line"></div>
+
+      <div class="show-box">
+        <h3 class="shows__date-header">DATE</h3>
+        <p class="shows__date">Mon Sept 06 2021</p>
+        <h3 class="shows__venue-header">VENUE</h3>
+        <p class="shows__venue">Ronald Lane</p>
+        <h3 class="shows__location-header">LOCATION</h3>
+        <p class="shows__location">San Francisco, CA</p>
+        <button type="submit">BUY TICKETS</button>
+      </div>
+      <div class="divider-line"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-large-box">
+        <div class="footer-header-box">
+          <h1 class="footer__cta">Get in Touch</h1>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/" class="socials__link">
+              <img
+                src="../assets/icons/Icon-instagram.svg"
+                alt="instagram-logo"
+                class="social__img"
+              />
+            </a>
+            <a href="https://www.facebook.com/" class="socials__link">
+              <img
+                src="../assets/icons/Icon-facebook.svg"
+                alt="facebook-logo"
+                class="social__img"
+              />
+            </a>
+            <a href="https://twitter.com/" class="socials__link">
+              <img
+                src="../assets/icons/Icon-twitter.svg"
+                alt="twitter-logo"
+                class="social__img"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-large-box">
+          <div class="contact-box">
+            <p class="contact__name">
+              Cam Adams <br />
+              The Bees Knees Management
+            </p>
+            <p class="contact__address">
+              503 Broadway Penthouse, <br />
+              New York, NY
+            </p>
+            <a href="info@thebeesknees.com" class="contact__email"
+              >info@thebeesknees.com</a
+            >
+          </div>
+
+          <div class="contact-box">
+            <p class="contact__name">
+              Pearl Gregg <br />
+              Limitless Artist Group
+            </p>
+            <p class="contact__address">
+              Booking Agent for <br />
+              US / South America / Japan
+            </p>
+            <a href="mailto:pearl.gregg@limitlessag.com" class="contact__email"
+              >pearl.gregg@limitlessag.com</a
+            >
+          </div>
+
+          <div class="contact-box">
+            <p class="contact__name">
+              Carson Whyte<br />
+              ARCH Entertainment
+            </p>
+            <p class="contact__address">
+              Booking Agent for <br />
+              UK / EU / AU
+            </p>
+            <a href="mailto:cwhyte@archentertainment.com" class="contact__email"
+              >cwhyte@archentertainment.com</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-logo-box">
+          <a href="../index.html" class="footer__logo-link">
+            <img
+              src="../assets/logos/Logo-bandsite.svg"
+              alt="bandsite-logo"
+              class="footer__logo"
+            />
+          </a>
+        </div>
+      </div>
+      <p class="footer__copyright">
+        Copyright The Bees Knees © 2021 All Rights Reserved
+      </p>
+    </footer>
+  </body>
 </html>

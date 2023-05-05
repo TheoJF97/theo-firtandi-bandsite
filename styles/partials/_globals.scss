@@ -1,0 +1,50 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+@use "./fonts" as *;
+
+* {
+  font-family: "Avenir Next Regular";
+}
+
+.body {
+  font-family: "Avenir Next Regular";
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.divider-line {
+  margin: 1rem 0;
+}
+
+//HERO
+.hero {
+  width: 100%;
+  height: 28vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  @include tablet {
+    height: 80vh;
+  }
+  &__title {
+    color: $primary-white;
+    @include padding-mobile-component;
+    @include mobile-page-header;
+    @include tablet {
+      @include padding-desktop-tablet-component;
+      @include desktop-tablet-page-header;
+    }
+  }
+  &-img-overlay {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 28vh;
+    background-color: rgba(50, 50, 50, 0.5);
+    @include tablet {
+      height: 80vh;
+    }
+  }
+}
