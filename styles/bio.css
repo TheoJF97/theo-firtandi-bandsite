@@ -25,7 +25,6 @@
 
 .divider-line {
   border: 1px solid #e1e1e1;
-  margin: 1rem 0;
 }
 
 .hero {
@@ -43,6 +42,7 @@
 }
 .hero__title {
   color: #ffffff;
+  padding-left: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir Next Demi";
@@ -92,7 +92,6 @@
   .comment__button,
   .shows__buy {
     max-width: 150px;
-    padding: 0 32px;
   }
 }
 
@@ -359,10 +358,20 @@
 
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
-  height: 28vh;
+  height: 185px;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 500px;
+  }
 }
 .hero-img-overlay {
-  height: 28vh;
+  height: 185px;
+}
+@media screen and (min-width: 768px) {
+  .hero-img-overlay {
+    height: 500px;
+  }
 }
 
 .about {
@@ -395,7 +404,7 @@
   line-height: 1.375rem;
   font-family: "Avenir Next Demi";
   margin-top: 0;
-  margin-bottom: 0.3125rem;
+  margin-bottom: 5px;
 }
 @media screen and (min-width: 768px) {
   .about__quote {
@@ -408,7 +417,7 @@
 @media screen and (min-width: 1280px) {
   .about__quote {
     width: 59%;
-    padding-bottom: 1rem;
+    padding-bottom: 16px;
   }
 }
 .about__bryan {
@@ -418,8 +427,8 @@
 }
 @media screen and (min-width: 768px) {
   .about__bryan {
-    font-size: 1rem;
-    margin-left: 3.75rem;
+    font-size: 16px;
+    margin-left: 60px;
   }
 }
 .about__band-name {
@@ -435,7 +444,7 @@
     font-weight: 600;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
-    padding: 2rem 3.75rem 0.75rem 3.75rem;
+    padding: 32px 60px 12px 60px;
     margin-bottom: 0;
   }
 }
@@ -447,12 +456,12 @@
   .about-band-description {
     flex-direction: row;
     padding: 0 3.75rem;
-    padding-bottom: 1rem;
+    padding-bottom: 16px;
   }
 }
 @media screen and (min-width: 1280px) {
   .about-band-description {
-    padding-right: 7.8125rem;
+    padding-right: 125px;
   }
 }
 .about__band-par {
@@ -470,13 +479,13 @@
 }
 @media screen and (min-width: 1280px) {
   .about__band-par {
-    padding-right: 5.75rem;
+    padding-right: 92px;
   }
 }
 
 .concert__img {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
   .concert__img {
@@ -525,7 +534,7 @@
 }
 .photo-gallery__img {
   width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 16px;
   filter: grayscale(60%);
 }
 .photo-gallery__img:hover {
@@ -558,6 +567,7 @@
   font-family: "Avenir Next Demi";
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+  padding-bottom: 0;
   margin: 0;
 }
 @media screen and (min-width: 768px) {
@@ -570,15 +580,29 @@
   }
 }
 
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-form {
+  width: 100%;
+}
+
 .comment-form,
 .comment-box {
   display: flex;
-  gap: 5px;
 }
 
 .comment-avatar {
-  width: 36px;
-  height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: 0.5rem;
+  margin-right: 0.75rem;
   background-color: #e1e1e1;
   border-radius: 50%;
   -o-object-fit: cover;
@@ -587,8 +611,8 @@
 }
 @media screen and (min-width: 768px) {
   .comment-avatar {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -598,38 +622,69 @@
   flex-direction: column;
 }
 
+.input-form {
+  width: 100%;
+}
+
+.input__name {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 0.125rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  border: 0.0625rem solid #e1e1e1;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+.input__name:focus {
+  border-color: #323232;
+}
+.input__name::-moz-placeholder {
+  color: #323232;
+}
+.input__name::placeholder {
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .input__name {
+    height: 1rem;
+    padding: 1rem;
+  }
+}
+
+.input__comment {
+  background-color: #fafafa;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.input__comment::-moz-placeholder {
+  color: #323232;
+  padding: 0;
+}
+.input__comment::placeholder {
+  color: #323232;
+  padding: 0;
+}
+.input__comment:focus {
+  border-color: #323232;
+}
+
 .comment-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .input__label {
   text-transform: uppercase;
   color: #afafaf;
   margin: 0;
-  font-size: 12px;
-  padding: 7px 0;
-}
-
-.input__name {
-  height: 2px;
-  width: 84%;
-  border-radius: 4px;
-  padding: 18px;
-  border: 1px solid #e1e1e1;
-}
-@media screen and (min-width: 768px) {
-  .input__name {
-    height: 48px;
-    padding: 16px;
-  }
-}
-.input__name:focus {
-  border-color: #323232;
-}
-.input__name:invalid {
-  border-color: #d22d2d;
+  font-size: 0.75rem;
+  padding: 1rem 0 0.4375rem 0;
 }
 
 .comment-input-comment {
@@ -642,20 +697,25 @@
   font-weight: bold;
 }
 
-.input-comment {
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-}
-
-label {
-  margin: 4px;
-}
-
 .comment-msg {
   color: #323232;
 }
 
 .comment-date {
   color: #afafaf;
+  margin-left: 1rem;
+}
+
+.comment__button {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__button {
+    padding: 0 2rem;
+    align-self: flex-end;
+  }
+}
+
+.input--error {
+  border: 2px solid #d22d2d;
 }/*# sourceMappingURL=bio.css.map */

@@ -19,8 +19,10 @@ let commentArray = [
   },
 ];
 
-//Grab form element
+//Grab form and input elements to global scale
 const formEl = document.querySelector(".comment-form");
+const nameInput = document.querySelector(".input__name");
+const commentInput = document.querySelector(".input__comment");
 
 //Listen for submit event via button and store values in object
 formEl.addEventListener("submit", (event) => {
@@ -29,53 +31,57 @@ formEl.addEventListener("submit", (event) => {
   const date = new Date().toLocaleDateString();
   const userComment = event.target.userComment.value;
 
-  let newComment = {
-    name: name,
-    date: date,
-    text: userComment,
-  };
-
-  addComment(newComment.name, newComment.date, newComment.text);
+  if (!name || !userComment) {
+    nameInput.classList.add("input--error");
+    commentInput.classList.add("input--error");
+  } else {
+    nameInput.classList.remove("input--error");
+    commentInput.classList.remove("input--error");
+    const newComment = displayComment(name, date, userComment);
+    formEl.reset();
+  }
 });
 
 const largeBox = document.querySelector(".largebox");
 
 //create a function to add the user inputted comment
-function addComment(name, date, text) {
+function displayComment(name, date, text) {
   const commentBox = document.createElement("div");
   commentBox.classList.add("comment-box");
   largeBox.prepend(commentBox);
 
   const commentAvatar = document.createElement("div");
   commentAvatar.classList.add("comment-avatar");
-  commentBox.prepend(commentAvatar);
+  commentBox.appendChild(commentAvatar);
 
   const commentContent = document.createElement("div");
   commentContent.classList.add("comment-content");
-  commentBox.prepend(commentContent);
+  commentBox.appendChild(commentContent);
 
-  const commentContentHeader = document.createElement("div");
-  commentContentHeader.classList.add("comment-header");
-  commentContent.prepend(commentContentHeader);
+  const commentHeader = document.createElement("div");
+  commentHeader.classList.add("comment-header");
+  commentContent.appendChild(commentHeader);
 
   const commentName = document.createElement("p");
   commentName.classList.add("comment-name");
   commentName.innerText = name;
-  commentContentHeader.prepend(commentName);
+  commentHeader.appendChild(commentName);
 
   const commentDate = document.createElement("span");
   commentDate.classList.add("comment-date");
   commentDate.innerText = date;
-  commentContentHeader.prepend(commentDate);
+  commentHeader.appendChild(commentDate);
 
   const commentMsg = document.createElement("p");
   commentMsg.classList.add("comment-msg");
   commentMsg.innerText = text;
-  commentContent.prepend(commentMsg);
+  commentContent.appendChild(commentMsg);
 
   const dividerLine = document.createElement("div");
   dividerLine.classList.add("divider-line");
   largeBox.prepend(dividerLine);
+
+  return commentBox;
 }
 
 //load default comment - function
@@ -83,42 +89,57 @@ function loadDefaultComments(comments) {
   for (comment of comments) {
     const dividerLine = document.createElement("div");
     dividerLine.classList.add("divider-line");
-    largeBox.appendChild(dividerLine);
 
     const commentBox = document.createElement("div");
     commentBox.classList.add("comment-box");
-    largeBox.appendChild(commentBox);
 
     const commentAvatar = document.createElement("div");
     commentAvatar.classList.add("comment-avatar");
-    commentBox.appendChild(commentAvatar);
 
     const commentContent = document.createElement("div");
     commentContent.classList.add("comment-content");
-    commentBox.appendChild(commentContent);
 
     const commentContentHeader = document.createElement("div");
     commentContentHeader.classList.add("comment-header");
-    commentContent.appendChild(commentContentHeader);
 
     const commentName = document.createElement("p");
     commentName.classList.add("comment-name");
     commentName.innerText = comment.name;
-    commentContentHeader.appendChild(commentName);
 
     const commentDate = document.createElement("span");
     commentDate.classList.add("comment-date");
     commentDate.innerText = comment.date;
-    commentContentHeader.appendChild(commentDate);
 
     const commentMsg = document.createElement("p");
     commentMsg.classList.add("comment-msg");
     commentMsg.innerText = comment.message;
+
+    // Append all the elements to the corresponding Divs
+    largeBox.appendChild(dividerLine);
+    largeBox.appendChild(commentBox);
+    commentBox.appendChild(commentAvatar);
+    commentBox.appendChild(commentContent);
+    commentContent.appendChild(commentContentHeader);
+    commentContentHeader.appendChild(commentName);
+    commentContentHeader.appendChild(commentDate);
     commentContent.appendChild(commentMsg);
   }
 }
 
 loadDefaultComments(commentArray);
+
+// image function
+const avatarEls = document.querySelectorAll(".comment-avatar");
+
+avatarEls.forEach((avatarEl) => {
+  avatarEl.addEventListener("error", () => {
+    avatarEl.style.backgroundImage = "none";
+    avatarEl.style.backgroundColor = "#e1e1e1";
+    avatarEl.alt = "";
+    avatarEl.src =
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAIAAOeAuvpTAAAAABJRU5ErkJggg==";
+  });
+});
 
 //Create a function to renderComment
 // function renderComments() {

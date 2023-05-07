@@ -8,30 +8,44 @@
 // HERO
 .hero {
   background-image: url(../assets/images/hero-shows.jpg);
-  height: 38vh;
+  height: 17.5625rem;
   width: 100%;
   box-sizing: border-box;
+  @include tablet {
+    height: 31.25rem;
+  }
   &-img-overlay {
-    height: 38vh;
+    height: 17.5625rem;
+    @include tablet {
+      height: 31.25rem;
+    }
   }
   &__album-title {
     color: $primary-white;
     padding-left: 1rem;
     @include mobile-sub-header;
+    font-size: 0.625rem;
     @include tablet {
       @include padding-desktop-tablet-component;
-      @include desktop-tablet-page-header;
+      @include desktop-tablet-sub-header;
+      padding-left: 2.25rem;
     }
   }
   &__title {
     width: 71%;
     margin-top: 0;
-    padding-left: 1rem;
+    @include tablet {
+      padding-left: 2.25rem;
+    }
   }
   &__soundcloud {
-    width: 91%;
-    height: 119px;
+    width: 90%;
+    height: 7.4375rem;
     padding-left: 1rem;
+    @include tablet {
+      padding-left: 2.25rem;
+      width: 53%;
+    }
   }
   &-content {
     display: flex;
@@ -42,13 +56,43 @@
 
 //SHOWS
 .shows {
-  padding: 1rem 1rem 0 1rem;
+  @include tablet {
+    padding: 36px;
+  }
   &__title {
     @include mobile-section-header;
     @include padding-mobile-headline;
     padding-bottom: 0;
+    padding-left: 1rem;
+    margin: 0;
+    @include tablet {
+      @include desktop-tablet-section-header;
+      padding: 1rem 0 0 0;
+    }
+  }
+  &-box {
+    padding: 1rem;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.shows__buy {
+  @include tablet {
     margin-top: 0;
   }
+}
+
+.shows-box {
+  &:hover:not(.box-selected) {
+    background-color: $secondary-alabaster;
+  }
+}
+
+.box-selected {
+  background-color: $secondary-mercury;
 }
 
 .shows__date-header,
@@ -61,4 +105,12 @@
 
 .shows__date {
   font-weight: bold;
+}
+
+.display--block {
+  display: block;
+}
+
+.display--none {
+  display: none;
 }

@@ -14,7 +14,6 @@
 
 .divider-line {
   border: 1px solid $secondary-mercury;
-  margin: 1rem 0;
 }
 
 //HERO
@@ -30,6 +29,7 @@
   }
   &__title {
     color: $primary-white;
+    padding-left: 1rem;
     @include mobile-page-header;
     @include tablet {
       @include padding-desktop-tablet-component;
@@ -67,6 +67,5 @@
   }
   @include tablet {
     max-width: 150px;
-    padding: 0 32px;
   }
 }

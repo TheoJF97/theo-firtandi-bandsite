@@ -138,40 +138,39 @@
     <!-- JOIN THE CONVERSATION -->
     <section class="comment">
       <h2 class="comment__title">Join the Conversation</h2>
-
-      <!-- FORM -->
-      <form class="comment-form">
-        <img
-          src="./assets/images/Mohan-muruge.jpg"
-          alt="user-mohan"
-          class="comment-avatar"
-        />
-        <div class="input-form">
-          <h4 class="input__label">name</h4>
-          <input
-            type="text"
-            name="userName"
-            id="name"
-            class="input__name"
-            placeholder="Enter your name"
+      <div class="comment-container">
+        <!-- FORM -->
+        <form class="comment-form">
+          <img
+            src="./assets/images/Mohan-muruge.jpg"
+            alt="user-mohan"
+            class="comment-avatar avatar-align"
           />
-          <h4 class="input__label">comment</h4>
-          <textarea
-            name="userComment"
-            id="userComment"
-            class="input__comment"
-            cols="35"
-            rows="5"
-            placeholder="Add a new comment"
-          >
-          </textarea>
-          <button type="submit" class="comment__button">COMMENT</button>
-        </div>
-      </form>
+          <div class="input-form">
+            <label for="name" class="input__label">name</label>
+            <input
+              type="text"
+              name="userName"
+              id="name"
+              class="input__name"
+              placeholder="Enter your name"
+            />
+            <label for="userComment" class="input__label">comment</label>
+            <textarea
+              name="userComment"
+              id="userComment"
+              class="input__comment"
+              cols="35"
+              rows="5"
+              placeholder="Add a new comment"
+            ></textarea>
+            <button type="submit" class="comment__button">COMMENT</button>
+          </div>
+        </form>
 
-      <!-- USERS' COMMENTS SECTION -->
-      <div class="largebox">
-        <!-- <div class="divider-line"></div>
+        <!-- USERS' COMMENTS SECTION -->
+        <div class="largebox">
+          <!-- <div class="divider-line"></div>
 
       <div class="comment-box">
         <div class="comment-avatar"></div>
@@ -188,7 +187,7 @@
         </div>
       </div> -->
 
-        <!-- <div class="divider-line"></div>
+          <!-- <div class="divider-line"></div>
 
       <div class="comment-box">
         <div class="comment-avatar"></div>
@@ -205,7 +204,7 @@
         </div>
       </div> -->
 
-        <!-- <div class="divider-line"></div>
+          <!-- <div class="divider-line"></div>
 
       <div class="comment-box">
         <div class="comment-avatar"></div>
@@ -221,6 +220,7 @@
           </p>
         </div>
       </div> -->
+        </div>
       </div>
     </section>
 

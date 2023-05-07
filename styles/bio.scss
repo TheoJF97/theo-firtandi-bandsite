@@ -8,9 +8,15 @@
 // HERO
 .hero {
   background-image: url(../assets/images/hero-bio.jpg);
-  height: 28vh;
+  height: 185px;
+  @include tablet {
+    height: 500px;
+  }
   &-img-overlay {
-    height: 28vh;
+    height: 185px;
+    @include tablet {
+      height: 500px;
+    }
   }
 }
 
@@ -32,21 +38,21 @@
   &__quote {
     @include mobile-sub-header;
     margin-top: 0;
-    margin-bottom: 0.3125rem;
+    margin-bottom: 5px;
     @include tablet {
       @include desktop-tablet-sub-header;
       @include padding-tablet-about;
     }
     @include desktop {
       width: 59%;
-      padding-bottom: 1rem;
+      padding-bottom: 16px;
     }
   }
   &__bryan {
     @include mobile-sub-header;
     @include tablet {
-      font-size: 1rem;
-      margin-left: 3.75rem;
+      font-size: 16px;
+      margin-left: 60px;
     }
   }
   &__band-name {
@@ -55,7 +61,7 @@
     @include tablet {
       @include desktop-tablet-sub-header;
       @include padding-desktop-tablet-headline;
-      padding: 2rem 3.75rem 0.75rem 3.75rem;
+      padding: 32px 60px 12px 60px;
       margin-bottom: 0;
     }
   }
@@ -65,10 +71,10 @@
     @include tablet {
       flex-direction: row;
       @include padding-tablet-about;
-      padding-bottom: 1rem;
+      padding-bottom: 16px;
     }
     @include desktop {
-      padding-right: 7.8125rem;
+      padding-right: 125px;
     }
   }
   &__band-par {
@@ -78,14 +84,14 @@
       @include desktop-tablet-body-copy;
     }
     @include desktop {
-      padding-right: 5.75rem;
+      padding-right: 92px;
     }
   }
 }
 
 .concert__img {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   @include tablet {
     @include padding-tablet-about;
     width: 85%;
@@ -120,7 +126,7 @@
   }
   &__img {
     width: 100%;
-    padding-bottom: 1rem;
+    padding-bottom: 16px;
     filter: grayscale(60%);
     &:hover {
       filter: grayscale(0);
@@ -146,6 +152,7 @@
 .comment__title {
   @include mobile-section-header;
   @include padding-mobile-headline;
+  padding-bottom: 0;
   margin: 0;
   @include tablet {
     @include desktop-tablet-section-header;
@@ -153,22 +160,37 @@
   }
 }
 
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .comment-form,
 .comment-box {
   display: flex;
-  gap: 5px;
+}
+
+.comment-form {
+  width: 100%;
+  padding-right: 0;
 }
 
 .comment-avatar {
-  width: 36px;
-  height: 36px;
-  background-color: $secondary-mercury; //if image not provided
+  background-image: url(../assets/images/Mohan-muruge.jpg);
+  background-color: $secondary-mercury;
+  background-size: cover;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: 0.5rem;
+  margin-right: 0.75rem;
   border-radius: 50%;
-  object-fit: cover;
+  // object-fit: cover;
   flex: none;
   @include tablet {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -178,36 +200,60 @@
   flex-direction: column;
 }
 
+.comment-content {
+  width: 100%;
+}
+
+.input__name {
+  width: calc(100%-3rem);
+  flex-grow: 1;
+  height: 0.125rem;
+
+  border-radius: 0.25rem;
+  padding: 1rem;
+  border: 0.0625rem solid $secondary-mercury;
+  background-color: $secondary-alabaster;
+  box-sizing: border-box;
+  &:focus {
+    border-color: $primary-black;
+  }
+  &::placeholder {
+    color: $primary-black;
+  }
+  @include tablet {
+    height: 1rem;
+    padding: 1rem;
+  }
+}
+
+.input__comment {
+  background-color: $secondary-alabaster;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  &::placeholder {
+    color: $primary-black;
+    padding: 0;
+  }
+  &:focus {
+    border-color: $primary-black;
+  }
+}
+
 .comment-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .input__label {
   text-transform: uppercase;
   color: $primary-silver;
   margin: 0;
-  font-size: 12px;
-  padding: 7px 0;
-}
-
-.input__name {
-  height: 2px;
-  width: 84%;
-  border-radius: 4px;
-  padding: 18px;
-  border: 1px solid $secondary-mercury;
-  @include tablet {
-    height: 48px;
-    padding: 16px;
-  }
-  &:focus {
-    border-color: $primary-black;
-  }
-  &:invalid {
-    border-color: #d22d2d;
-  }
+  font-size: 0.75rem;
+  padding: 1rem 0 0.4375rem 0;
 }
 
 .comment-input-comment {
@@ -220,16 +266,21 @@
   font-weight: bold;
 }
 
-.input-comment {
-  @include mobile-labels-buttons;
-}
-label {
-  margin: 4px;
-}
-
 .comment-msg {
   color: $primary-black;
 }
 .comment-date {
   color: $primary-silver;
+  margin-left: 1rem;
+}
+
+.comment__button {
+  margin-bottom: 1rem;
+  @include tablet {
+    padding: 0 2rem;
+  }
+}
+
+.input--error {
+  border: 2px solid $error-state;
 }
