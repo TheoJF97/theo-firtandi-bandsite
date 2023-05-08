@@ -1,24 +1,23 @@
 @font-face {
-  font-family: "Avenir Next Regular";
+  font-family: "Avenir Next";
   font-weight: 400;
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("woff2");
 }
 @font-face {
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
   font-weight: 600;
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("woff2");
 }
 @font-face {
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next";
   font-weight: 700;
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("woff2");
 }
 * {
-  font-family: "Avenir Next Regular";
+  font-family: "Avenir Next", sans-serif;
 }
 
 .body {
-  font-family: "Avenir Next Regular";
   margin: 0;
   box-sizing: border-box;
 }
@@ -45,7 +44,7 @@
   padding-left: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
 }
 @media screen and (min-width: 768px) {
   .hero__title {
@@ -221,7 +220,7 @@
 .footer__cta {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   margin: 0;
@@ -387,7 +386,7 @@
 .about__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   margin: 0;
@@ -404,7 +403,7 @@
 .about__quote {
   font-size: 0.8125rem;
   line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -425,7 +424,7 @@
 .about__bryan {
   font-size: 0.8125rem;
   line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
 }
 @media screen and (min-width: 768px) {
   .about__bryan {
@@ -436,7 +435,7 @@
 .about__band-name {
   font-size: 0.8125rem;
   line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
   margin-bottom: 0;
 }
 @media screen and (min-width: 768px) {
@@ -508,7 +507,7 @@
 .photo-gallery__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   margin: 0;
@@ -570,7 +569,7 @@
 .comment__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-bottom: 0;

@@ -1,18 +1,18 @@
 // FONT FAMILIES
 @font-face {
-  font-family: "Avenir Next Regular";
+  font-family: "Avenir Next";
   font-weight: 400;
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("woff2");
 }
 
 @font-face {
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
   font-weight: 600;
   src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("woff2");
 }
 
 @font-face {
-  font-family: "Avenir Next Bold";
+  font-family: "Avenir Next";
   font-weight: 700;
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("woff2");
 }
@@ -21,19 +21,19 @@
 @mixin mobile-page-header {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
 }
 
 @mixin mobile-section-header {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
 }
 
 @mixin mobile-sub-header {
   font-size: 0.8125rem;
   line-height: 1.375rem;
-  font-family: "Avenir Next Demi";
+  font-family: "Avenir Next";
 }
 @mixin mobile-body-copy {
   font-size: 0.8125rem;

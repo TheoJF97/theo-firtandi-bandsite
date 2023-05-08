@@ -3,11 +3,10 @@
 @use "./fonts" as *;
 
 * {
-  font-family: "Avenir Next Regular";
+  font-family: "Avenir Next", sans-serif;
 }
 
 .body {
-  font-family: "Avenir Next Regular";
   margin: 0;
   box-sizing: border-box;
 }

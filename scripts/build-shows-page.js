@@ -47,6 +47,11 @@ showsSection.appendChild(showsTitle);
 
 //Create function to load the default shows
 function loadDefaultShows(shows) {
+
+
+
+
+  
   for (let i = 0; i < shows.length; i++) {
     //Create a box for each show
     const showsBox = document.createElement("div");

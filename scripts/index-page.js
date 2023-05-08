@@ -1,23 +1,89 @@
-let commentArray = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    message:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    message:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    message:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+// let commentArray = [
+//   {
+//     name: "Connor Walton",
+//     date: "02/17/2021",
+//     message:
+//       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+//   },
+//   {
+//     name: "Emilie Beach",
+//     date: "01/09/2021",
+//     message:
+//       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+//   },
+//   {
+//     name: "Miles Acosta",
+//     date: "12/20/2020",
+//     message:
+//       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+//   },
+// ];
+
+axios
+  .get(
+    "https://project-1-api.herokuapp.com/comments/?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4"
+  )
+  .then((result) => {
+    let commentsArray = result.data;
+
+    //Function to load the default comments passing an Array of comments
+    function loadDefaultComments(comments) {
+      const commentsAll = document.querySelector(".comments-all");
+
+      // Add divider line before first comment
+      const dividerLineStart = document.createElement("div");
+      dividerLineStart.classList.add("divider-line");
+      commentsAll.appendChild(dividerLineStart);
+
+      for (comment of comments) {
+        const dividerLine = document.createElement("div");
+        dividerLine.classList.add("divider-line");
+
+        const commentBox = document.createElement("div");
+        commentBox.classList.add("comment-box");
+
+        const commentAvatar = document.createElement("div");
+        commentAvatar.classList.add("comment-avatar");
+
+        const commentContent = document.createElement("div");
+        commentContent.classList.add("comment-content");
+
+        const commentHeader = document.createElement("div");
+        commentHeader.classList.add("comment-header");
+
+        const commentName = document.createElement("p");
+        commentName.classList.add("comment-name");
+        commentName.innerText = comment.name;
+
+        const commentDate = document.createElement("span");
+        commentDate.classList.add("comment-date");
+        commentDate.innerText = new Date(
+          comment.timestamp
+        ).toLocaleDateString();
+
+        const commentMsg = document.createElement("p");
+        commentMsg.classList.add("comment-msg");
+        commentMsg.innerText = comment.comment;
+
+        // Append all the elements to the corresponding Divs
+        commentsAll.appendChild(commentBox);
+        commentBox.appendChild(commentAvatar);
+        commentBox.appendChild(commentContent);
+        commentContent.appendChild(commentHeader);
+        commentHeader.appendChild(commentName);
+        commentHeader.appendChild(commentDate);
+        commentContent.appendChild(commentMsg);
+
+        // Add divider line after comment
+        commentsAll.appendChild(dividerLine);
+      }
+    }
+    //invoke the function
+    loadDefaultComments(commentsArray);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 //Grab form and input elements to global scale
 const formEl = document.querySelector(".comment-form");
@@ -143,7 +209,8 @@ function loadDefaultComments(comments) {
   }
 }
 //invoke the function
-loadDefaultComments(commentArray);
+// loadDefaultComments(commentArray);
+// COMMENTED TEMPORARILY
 
 // To create a function that removes the alt text of avatar upon error
 const avatarEls = document.querySelectorAll(".comment-avatar");
