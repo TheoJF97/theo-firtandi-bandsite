@@ -147,140 +147,164 @@
   @include tablet {
     @include padding-desktop-tablet-component;
   }
-}
+  @include desktop {
+    padding: 0 4rem;
+  }
+  &__title {
+    @include mobile-section-header;
+    @include padding-mobile-headline;
+    padding-bottom: 0;
+    margin: 0;
+    @include tablet {
+      @include desktop-tablet-section-header;
+      @include padding-desktop-tablet-headline;
+    }
+  }
+  &-section,
+  &-form,
+  &-box,
+  &-container,
+  &-header,
+  &-content {
+    display: flex;
+  }
+  &-section,
+  &-container {
+    justify-content: center;
+  }
 
-.comment__title {
-  @include mobile-section-header;
-  @include padding-mobile-headline;
-  padding-bottom: 0;
-  margin: 0;
-  @include tablet {
-    @include desktop-tablet-section-header;
-    @include padding-desktop-tablet-headline;
+  &-section {
+    width: 100%;
+    @include tablet {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include desktop {
+      width: 79%;
+    }
+  }
+  &-container,
+  &-header {
+    align-items: center;
+  }
+  &-container {
+    flex-direction: column;
+  }
+  &__button {
+    align-self: flex-end;
+  }
+  &-box {
+    margin-top: 1rem;
+    @include tablet {
+      margin: 1rem 0;
+    }
+  }
+  &-form {
+    width: 100%;
+    padding-right: 0;
+  }
+  &-avatar {
+    background-color: $secondary-mercury;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-top: 0.5rem;
+    margin-right: 0.75rem;
+    border-radius: 50%;
+    flex: none;
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &-header {
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  &-input-comment,
+  &-msg,
+  &-name {
+    color: $primary-black;
+  }
+  &-name {
+    margin: 0;
+    font-weight: bold;
+  }
+  &-date {
+    color: $primary-silver;
+    margin-left: 1rem;
+  }
+  &__button {
+    margin-bottom: 1rem;
+    @include tablet {
+      padding: 0 2rem;
+      margin: 1.375rem 0;
+    }
+  }
+  &-content {
+    flex-direction: column;
+    width: 100%;
   }
 }
 
-.comment-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.comment-form,
-.comment-box {
-  display: flex;
-}
-
-.comment-form {
-  width: 100%;
-  padding-right: 0;
-}
-
-.comment-avatar {
+.avatar-mohan {
   background-image: url(../assets/images/Mohan-muruge.jpg);
+  object-fit: cover;
+  margin-top: 2.125rem;
   background-color: $secondary-mercury;
-  background-size: cover;
-  width: 2.25rem;
-  height: 2.25rem;
-  margin-top: 0.5rem;
-  margin-right: 0.75rem;
-  border-radius: 50%;
-  // object-fit: cover;
-  flex: none;
-  @include tablet {
-    width: 3rem;
-    height: 3rem;
+  &[alt="user-mohan"] {
+    background-image: none;
   }
 }
 
-.input-form,
-.comment-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.comment-content {
-  width: 100%;
-}
-
-.input__name {
-  width: calc(100%-3rem);
-  flex-grow: 1;
-  height: 0.125rem;
-
-  border-radius: 0.25rem;
-  padding: 1rem;
-  border: 0.0625rem solid $secondary-mercury;
-  background-color: $secondary-alabaster;
-  box-sizing: border-box;
-  &:focus {
-    border-color: $primary-black;
+.input {
+  &-form,
+  &__name,
+  &__comment {
+    width: 100%;
   }
-  &::placeholder {
-    color: $primary-black;
+  &-form {
+    display: flex;
+    flex-direction: column;
   }
-  @include tablet {
-    height: 1rem;
+  &__name {
+    height: 0.125rem;
+    border-radius: 0.25rem;
     padding: 1rem;
+    border: 0.0625rem solid $secondary-mercury;
+    background-color: $secondary-alabaster;
+    box-sizing: border-box;
+    &:focus {
+      border-color: $primary-black;
+    }
+    &::placeholder {
+      color: $primary-black;
+    }
+    @include tablet {
+      height: 1rem;
+    }
   }
-}
-
-.input__comment {
-  background-color: $secondary-alabaster;
-  border-radius: 0.3rem;
-  padding: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-  &::placeholder {
-    color: $primary-black;
-    padding: 0;
+  &__comment {
+    background-color: $secondary-alabaster;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    border: 0.0625rem solid $secondary-mercury;
+    box-sizing: border-box;
+    &::placeholder {
+      color: $primary-black;
+      padding: 0;
+    }
+    &:focus {
+      border-color: $primary-black;
+    }
   }
-  &:focus {
-    border-color: $primary-black;
+  &__label {
+    text-transform: uppercase;
+    color: $primary-silver;
+    margin: 0;
+    font-size: 0.75rem;
+    padding: 1rem 0 0.4375rem 0;
   }
-}
-
-.comment-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.input__label {
-  text-transform: uppercase;
-  color: $primary-silver;
-  margin: 0;
-  font-size: 0.75rem;
-  padding: 1rem 0 0.4375rem 0;
-}
-
-.comment-input-comment {
-  color: $primary-black;
-}
-
-.comment-name {
-  margin: 0;
-  color: $primary-black;
-  font-weight: bold;
-}
-
-.comment-msg {
-  color: $primary-black;
-}
-.comment-date {
-  color: $primary-silver;
-  margin-left: 1rem;
-}
-
-.comment__button {
-  margin-bottom: 1rem;
-  @include tablet {
-    padding: 0 2rem;
+  &--error {
+    border: 2px solid $error-state;
   }
-}
-
-.input--error {
-  border: 2px solid $error-state;
 }

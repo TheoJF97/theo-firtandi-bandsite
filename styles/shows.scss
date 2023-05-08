@@ -57,7 +57,12 @@
 //SHOWS
 .shows {
   @include tablet {
-    padding: 36px;
+    padding: 2.25rem;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   &__title {
     @include mobile-section-header;
@@ -72,43 +77,43 @@
   }
   &-box {
     padding: 1rem;
+    &:hover:not(.box-selected) {
+      background-color: $secondary-alabaster;
+    }
     @include tablet {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
-}
-
-.shows__buy {
-  @include tablet {
-    margin-top: 0;
+  &__date,
+  &__venue,
+  &__location {
+    @include tablet {
+      width: 20%;
+    }
+    &-header {
+      @include mobile-labels-buttons;
+      font-size: 0.75rem;
+      color: $primary-silver;
+      @include tablet {
+        width: 20%;
+      }
+    }
   }
-}
 
-.shows-box {
-  &:hover:not(.box-selected) {
-    background-color: $secondary-alabaster;
+  &__buy {
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+  &__date {
+    font-weight: bold;
   }
 }
 
 .box-selected {
   background-color: $secondary-mercury;
-}
-
-.shows__date-header,
-.shows__venue-header,
-.shows__location-header {
-  @include mobile-labels-buttons;
-  font-size: 0.75rem;
-  color: $primary-silver;
-}
-
-.shows__date {
-  font-weight: bold;
-}
-
-.display--block {
-  display: block;
 }
 
 .display--none {

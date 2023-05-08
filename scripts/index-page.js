@@ -1,7 +1,7 @@
 let commentArray = [
   {
     name: "Connor Walton",
-    date: "2/17/2021",
+    date: "02/17/2021",
     message:
       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
   },
@@ -42,50 +42,65 @@ formEl.addEventListener("submit", (event) => {
   }
 });
 
-const largeBox = document.querySelector(".largebox");
+const commentsAll = document.querySelector(".comments-all");
 
 //create a function to add the user inputted comment
 function displayComment(name, date, text) {
+  //Create a box for each comment
   const commentBox = document.createElement("div");
   commentBox.classList.add("comment-box");
-  largeBox.prepend(commentBox);
 
+  //Create the avatar div
   const commentAvatar = document.createElement("div");
   commentAvatar.classList.add("comment-avatar");
-  commentBox.appendChild(commentAvatar);
 
+  //Create a box for the comment content
   const commentContent = document.createElement("div");
   commentContent.classList.add("comment-content");
-  commentBox.appendChild(commentContent);
 
+  //Create the comment header
   const commentHeader = document.createElement("div");
   commentHeader.classList.add("comment-header");
-  commentContent.appendChild(commentHeader);
 
+  //Create the name of the user
   const commentName = document.createElement("p");
   commentName.classList.add("comment-name");
   commentName.innerText = name;
-  commentHeader.appendChild(commentName);
 
+  //Create the date of the comment
   const commentDate = document.createElement("span");
   commentDate.classList.add("comment-date");
   commentDate.innerText = date;
-  commentHeader.appendChild(commentDate);
 
+  //Create the message of the comment
   const commentMsg = document.createElement("p");
   commentMsg.classList.add("comment-msg");
   commentMsg.innerText = text;
-  commentContent.appendChild(commentMsg);
 
+  //Create the divider line
   const dividerLine = document.createElement("div");
   dividerLine.classList.add("divider-line");
-  largeBox.prepend(dividerLine);
 
-  return commentBox;
+  //Append/Prepend all elements to their corresponding parent
+  commentsAll.prepend(commentBox);
+  commentBox.appendChild(commentAvatar);
+  commentBox.appendChild(commentContent);
+  commentContent.appendChild(commentHeader);
+  commentHeader.appendChild(commentName);
+  commentHeader.appendChild(commentDate);
+  commentContent.appendChild(commentMsg);
+  commentsAll.prepend(dividerLine);
 }
 
-//load default comment - function
+//Function to load the default comments passing an Array of comments
 function loadDefaultComments(comments) {
+  const commentsAll = document.querySelector(".comments-all");
+
+  // Add divider line before first comment
+  const dividerLineStart = document.createElement("div");
+  dividerLineStart.classList.add("divider-line");
+  commentsAll.appendChild(dividerLineStart);
+
   for (comment of comments) {
     const dividerLine = document.createElement("div");
     dividerLine.classList.add("divider-line");
@@ -99,8 +114,8 @@ function loadDefaultComments(comments) {
     const commentContent = document.createElement("div");
     commentContent.classList.add("comment-content");
 
-    const commentContentHeader = document.createElement("div");
-    commentContentHeader.classList.add("comment-header");
+    const commentHeader = document.createElement("div");
+    commentHeader.classList.add("comment-header");
 
     const commentName = document.createElement("p");
     commentName.classList.add("comment-name");
@@ -115,20 +130,22 @@ function loadDefaultComments(comments) {
     commentMsg.innerText = comment.message;
 
     // Append all the elements to the corresponding Divs
-    largeBox.appendChild(dividerLine);
-    largeBox.appendChild(commentBox);
+    commentsAll.appendChild(commentBox);
     commentBox.appendChild(commentAvatar);
     commentBox.appendChild(commentContent);
-    commentContent.appendChild(commentContentHeader);
-    commentContentHeader.appendChild(commentName);
-    commentContentHeader.appendChild(commentDate);
+    commentContent.appendChild(commentHeader);
+    commentHeader.appendChild(commentName);
+    commentHeader.appendChild(commentDate);
     commentContent.appendChild(commentMsg);
+
+    // Add divider line after comment
+    commentsAll.appendChild(dividerLine);
   }
 }
-
+//invoke the function
 loadDefaultComments(commentArray);
 
-// image function
+// To create a function that removes the alt text of avatar upon error
 const avatarEls = document.querySelectorAll(".comment-avatar");
 
 avatarEls.forEach((avatarEl) => {
@@ -140,40 +157,3 @@ avatarEls.forEach((avatarEl) => {
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAIAAOeAuvpTAAAAABJRU5ErkJggg==";
   });
 });
-
-//Create a function to renderComment
-// function renderComments() {
-//   const largeBox = document.querySelector(".comment");
-
-//   const dividerLine = document.createElement("div");
-//   dividerLine.classList.add("divider-line");
-//   largeBox.appendChild(dividerLine);
-
-//   const commentBox = document.createElement("div");
-//   commentBox.classList.add("comment-box");
-//   largeBox.appendChild(commentBox);
-
-//   const commentAvatar = document.createElement("div");
-//   commentAvatar.classList.add("comment-Avatar");
-//   commentBox.appendChild(commentAvatar);
-
-//   const commentContent = document.createElement("div");
-//   commentContent.classList.add("comment-content");
-//   commentBox.appendChild(commentContent);
-
-//   const commentContentHeader = document.createElement("div");
-//   commentContentHeader.classList.add("comment-content-header");
-//   commentContent.appendChild(commentContentHeader);
-
-//   const commentName = document.createElement("p");
-//   commentName.classList.add("comment-name");
-//   commentContentHeader.appendChild(commentName);
-
-//   const commentDate = document.createElement("span");
-//   commentDate.classList.add("comment-date");
-//   commentContentHeader.appendChild(commentDate);
-
-//   const commentMsg = document.createElement("p");
-//   commentMsg.classList.add("comment-msg");
-//   commentContent.appendChild(commentMsg);
-// }

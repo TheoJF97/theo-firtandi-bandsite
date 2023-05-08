@@ -31,63 +31,79 @@ let showsArray = [
     location: "San Francisco, CA ",
   },
 ];
-//grab the parent section element
-const showsSection = document.querySelector(".shows");
 
-for (let i = 0; i < showsArray.length; i++) {
-  // Create a new div for each show
-  const showsBox = document.createElement("div");
-  showsBox.classList.add("shows-box");
+//To Generate the section shows and h1 while still keeping showsSection in global scope
+const hero = document.querySelector(".hero");
+const footer = document.querySelector(".footer");
 
-  // Create the date header and paragraph
-  const dateHeader = document.createElement("h3");
-  dateHeader.classList.add("shows__date-header");
-  dateHeader.textContent = "DATE";
-  const dateParagraph = document.createElement("p");
-  dateParagraph.classList.add("shows__date");
-  dateParagraph.textContent = showsArray[i].date;
+const showsSection = document.createElement("section");
+showsSection.classList.add("shows");
+hero.insertAdjacentElement("afterend", showsSection);
 
-  // Create the venue header and paragraph
-  const venueHeader = document.createElement("h3");
-  venueHeader.classList.add("shows__venue-header");
-  venueHeader.textContent = "VENUE";
-  const venueParagraph = document.createElement("p");
-  venueParagraph.classList.add("shows__venue");
-  venueParagraph.textContent = showsArray[i].venue;
+const showsTitle = document.createElement("h1");
+showsTitle.classList.add("shows__title");
+showsTitle.textContent = "Shows";
+showsSection.appendChild(showsTitle);
 
-  // Create the location header and paragraph
-  const locationHeader = document.createElement("h3");
-  locationHeader.classList.add("shows__location-header");
-  locationHeader.textContent = "LOCATION";
-  const locationParagraph = document.createElement("p");
-  locationParagraph.classList.add("shows__location");
-  locationParagraph.textContent = showsArray[i].location;
+//Create function to load the default shows
+function loadDefaultShows(shows) {
+  for (let i = 0; i < shows.length; i++) {
+    //Create a box for each show
+    const showsBox = document.createElement("div");
+    showsBox.classList.add("shows-box");
 
-  // Create the buy tickets button
-  const buyButton = document.createElement("button");
-  buyButton.classList.add("shows__buy");
-  buyButton.setAttribute("type", "submit");
-  buyButton.textContent = "BUY TICKETS";
+    //Create the date header and paragraph
+    const dateHeader = document.createElement("h3");
+    dateHeader.classList.add("shows__date-header");
+    dateHeader.textContent = "DATE";
+    const dateParagraph = document.createElement("p");
+    dateParagraph.classList.add("shows__date");
+    dateParagraph.textContent = shows[i].date;
 
-  // Append all the elements to the show div
-  showsBox.appendChild(dateHeader);
-  showsBox.appendChild(dateParagraph);
-  showsBox.appendChild(venueHeader);
-  showsBox.appendChild(venueParagraph);
-  showsBox.appendChild(locationHeader);
-  showsBox.appendChild(locationParagraph);
-  showsBox.appendChild(buyButton);
+    //Create the venue header and paragraph
+    const venueHeader = document.createElement("h3");
+    venueHeader.classList.add("shows__venue-header");
+    venueHeader.textContent = "VENUE";
+    const venueParagraph = document.createElement("p");
+    venueParagraph.classList.add("shows__venue");
+    venueParagraph.textContent = shows[i].venue;
 
-  // Append the show div to the shows section
-  showsSection.appendChild(showsBox);
+    //Create the location header and paragraph
+    const locationHeader = document.createElement("h3");
+    locationHeader.classList.add("shows__location-header");
+    locationHeader.textContent = "LOCATION";
+    const locationParagraph = document.createElement("p");
+    locationParagraph.classList.add("shows__location");
+    locationParagraph.textContent = shows[i].location;
 
-  // Add a divider line after each show
-  if (i < showsArray.length - 1) {
-    const dividerLine = document.createElement("div");
-    dividerLine.classList.add("divider-line");
-    showsSection.appendChild(dividerLine);
+    //Create the buy tickets button
+    const buyButton = document.createElement("button");
+    buyButton.classList.add("shows__buy");
+    buyButton.textContent = "BUY TICKETS";
+
+    //Append all the elements to the shows box
+    showsBox.appendChild(dateHeader);
+    showsBox.appendChild(dateParagraph);
+    showsBox.appendChild(venueHeader);
+    showsBox.appendChild(venueParagraph);
+    showsBox.appendChild(locationHeader);
+    showsBox.appendChild(locationParagraph);
+    showsBox.appendChild(buyButton);
+
+    // Append the each shows box to the shows section
+    showsSection.appendChild(showsBox);
+
+    // Add a divider line after each show
+    if (i < showsArray.length) {
+      const dividerLine = document.createElement("div");
+      dividerLine.classList.add("divider-line");
+      showsSection.appendChild(dividerLine);
+    }
   }
 }
+
+//invoke function
+loadDefaultShows(showsArray);
 
 //Create a function to hide field headers when viewport changes to tablet and above
 //grab the headers to be hidden
@@ -109,7 +125,7 @@ handleViewportChange();
 
 const showsBoxEls = document.querySelectorAll(".shows-box");
 
-// Create an event listener where upon click, the selected box styling is applied 
+// Create an event listener where upon click, the selected box styling is applied
 showsBoxEls.forEach((showsBoxEl) => {
   showsBoxEl.addEventListener("click", () => {
     document.querySelector(".box-selected")?.classList.remove("box-selected");
