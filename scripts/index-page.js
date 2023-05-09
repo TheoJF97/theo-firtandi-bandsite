@@ -18,13 +18,13 @@
 //       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
 //   },
 // ];
+const url = `https://project-1-api.herokuapp.com/comments/?api_key=4f57abf7-56cd-439f-8f4b-a987331be0b4`;
 
 axios
-  .get(
-    "https://project-1-api.herokuapp.com/comments/?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4"
-  )
+  .get(url)
   .then((result) => {
     let commentsArray = result.data;
+    console.log(commentsArray);
 
     //Function to load the default comments passing an Array of comments
     function loadDefaultComments(comments) {
@@ -86,9 +86,6 @@ axios
   });
 
 //AXIOS post test
-
-// const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
-const url = `https://project-1-api.herokuapp.com/comments/?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`;
 
 //Grab form and input elements to global scale
 const formEl = document.querySelector(".comment-form");
