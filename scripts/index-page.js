@@ -85,6 +85,11 @@ axios
     console.log(error);
   });
 
+//AXIOS post test
+
+// const apiKey = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+const url = `https://project-1-api.herokuapp.com/comments/?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`;
+
 //Grab form and input elements to global scale
 const formEl = document.querySelector(".comment-form");
 const nameInput = document.querySelector(".input__name");
@@ -103,7 +108,25 @@ formEl.addEventListener("submit", (event) => {
   } else {
     nameInput.classList.remove("input--error");
     commentInput.classList.remove("input--error");
-    const newComment = displayComment(name, date, userComment);
+    // const newComment = displayComment(name, date, userComment);
+
+    axios
+      .post(url, {
+        name: name,
+        comment: userComment,
+      })
+      .then((response) => {
+        const newComment = response.data;
+        displayComment(
+          newComment.name,
+          new Date(newComment.timestamp).toLocaleDateString(),
+          newComment.comment
+        );
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
     formEl.reset();
   }
 });
@@ -208,9 +231,6 @@ function loadDefaultComments(comments) {
     commentsAll.appendChild(dividerLine);
   }
 }
-//invoke the function
-// loadDefaultComments(commentArray);
-// COMMENTED TEMPORARILY
 
 // To create a function that removes the alt text of avatar upon error
 const avatarEls = document.querySelectorAll(".comment-avatar");
