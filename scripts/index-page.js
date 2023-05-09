@@ -64,13 +64,18 @@ function loadAllComments() {
   axios
     .get(url)
     .then((result) => {
-      let commentsArray = result.data;
-      console.log(commentsArray);
+      let comments = result.data;
+      console.log(comments);
+
+      // Sort comments by date
+      comments.sort(
+        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+      );
 
       // Clear all the comments
       commentsAll.innerHTML = "";
 
-      for (comment of commentsArray) {
+      for (comment of comments) {
         displayComment(comment);
       }
     })
@@ -107,7 +112,7 @@ formEl.addEventListener("submit", (event) => {
         //clear the form
         event.target.reset();
 
-        //Update the commentsArray from API
+        //Update the comments from API
         loadAllComments();
       })
 
