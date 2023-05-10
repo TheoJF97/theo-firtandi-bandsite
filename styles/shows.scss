@@ -19,6 +19,10 @@
     @include tablet {
       height: 31.25rem;
     }
+    @include desktop {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__album-title {
     color: $primary-white;
@@ -37,6 +41,10 @@
     @include tablet {
       padding-left: 2.25rem;
     }
+    @include desktop {
+      width: 67%;
+      margin-right: 0;
+    }
   }
   &__soundcloud {
     width: 90%;
@@ -46,11 +54,19 @@
       padding-left: 2.25rem;
       width: 53%;
     }
+    @include desktop {
+      padding-left: 0;
+    }
   }
   &-content {
     display: flex;
     flex-direction: column;
-    align-items: space-between;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+    }
   }
 }
 
