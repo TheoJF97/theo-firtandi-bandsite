@@ -40,18 +40,21 @@ const showsSection = document.createElement("section");
 showsSection.classList.add("shows");
 hero.insertAdjacentElement("afterend", showsSection);
 
+//Create the h1 Element, add shows title class, fill in text, append
 const showsTitle = document.createElement("h1");
 showsTitle.classList.add("shows__title");
 showsTitle.textContent = "Shows";
 showsSection.appendChild(showsTitle);
 
+//Create div element
+const showsAll = document.createElement("div");
+//Add class shows-all
+showsAll.classList.add("shows-all");
+//showsSection.appendChild(showsAll)
+showsSection.appendChild(showsAll);
+
 //Create function to load the default shows
 function loadDefaultShows(shows) {
-
-
-
-
-  
   for (let i = 0; i < shows.length; i++) {
     //Create a box for each show
     const showsBox = document.createElement("div");
@@ -95,14 +98,14 @@ function loadDefaultShows(shows) {
     showsBox.appendChild(locationParagraph);
     showsBox.appendChild(buyButton);
 
-    // Append the each shows box to the shows section
-    showsSection.appendChild(showsBox);
+    // Append each shows box to the shows section
+    showsAll.appendChild(showsBox);
 
     // Add a divider line after each show
     if (i < showsArray.length) {
       const dividerLine = document.createElement("div");
       dividerLine.classList.add("divider-line");
-      showsSection.appendChild(dividerLine);
+      showsAll.appendChild(dividerLine);
     }
   }
 }
@@ -110,7 +113,10 @@ function loadDefaultShows(shows) {
 //invoke function
 loadDefaultShows(showsArray);
 
-//Create a function to hide field headers when viewport changes to tablet and above
+/*
+Create a function to hide field headers when viewport changes to 
+  tablet and above
+*/
 //grab the headers to be hidden
 const headers = showsSection.querySelectorAll(
   ".shows__date-header, .shows__venue-header, .shows__location-header"
@@ -128,9 +134,13 @@ function handleViewportChange() {
 window.addEventListener("resize", handleViewportChange);
 handleViewportChange();
 
+/*
+Create an event listener where upon click, 
+the selected box styling is applied
+*/
 const showsBoxEls = document.querySelectorAll(".shows-box");
 
-// Create an event listener where upon click, the selected box styling is applied
+// Create an
 showsBoxEls.forEach((showsBoxEl) => {
   showsBoxEl.addEventListener("click", () => {
     document.querySelector(".box-selected")?.classList.remove("box-selected");

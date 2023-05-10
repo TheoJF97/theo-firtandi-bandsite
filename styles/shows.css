@@ -451,8 +451,8 @@
 @media screen and (min-width: 1280px) {
   .shows {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 .shows__title {
@@ -484,6 +484,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-box {
+    width: 46rem;
   }
 }
 @media screen and (min-width: 768px) {

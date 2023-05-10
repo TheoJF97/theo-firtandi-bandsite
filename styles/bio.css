@@ -455,7 +455,7 @@
 }
 @media screen and (min-width: 768px) {
   .about-band-description {
-    flex-direction: row;
+    flex-direction: rfow;
     padding: 0 3.75rem;
     padding-bottom: 16px;
   }
@@ -624,6 +624,7 @@
 .comment-form {
   width: 100%;
   padding-right: 0;
+  border-bottom: 1px solid #e1e1e1;
 }
 .comment-avatar {
   background-color: #e1e1e1;
