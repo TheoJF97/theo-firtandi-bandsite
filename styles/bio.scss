@@ -18,6 +18,11 @@
       height: 500px;
     }
   }
+  &__title {
+    @include desktop {
+      @include desktop-margin;
+    }
+  }
 }
 
 // ABOUT
@@ -25,6 +30,9 @@
   @include padding-mobile-component;
   @include tablet {
     @include padding-desktop-tablet-component;
+  }
+  @include desktop {
+    @include desktop-margin;
   }
   &__title {
     @include mobile-section-header;
@@ -105,6 +113,11 @@
   @include tablet {
     @include padding-desktop-tablet-component;
   }
+  &-container {
+    @include desktop {
+      @include desktop-margin;
+    }
+  }
   &__title {
     @include mobile-section-header;
     @include padding-mobile-headline;
@@ -149,6 +162,7 @@
   }
   @include desktop {
     padding: 0 4rem;
+    @include desktop-margin;
   }
   &__title {
     @include mobile-section-header;

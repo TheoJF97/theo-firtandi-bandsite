@@ -36,3 +36,9 @@
 @mixin padding-desktop-tablet-component {
   padding: 0 2.25rem;
 }
+
+@mixin desktop-margin {
+  width: $desktop-margin;
+  margin-left: auto;
+  margin-right: auto;
+}

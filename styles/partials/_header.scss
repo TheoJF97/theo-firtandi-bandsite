@@ -16,6 +16,9 @@
     display: flex;
     justify-content: flex-start;
   }
+  @include desktop {
+    @include desktop-margin;
+  }
 }
 
 .nav-bar__logo {

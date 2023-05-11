@@ -24,6 +24,9 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    @include desktop {
+      @include desktop-margin;
+    }
   }
   &-header-box {
     @include tablet {
