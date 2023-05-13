@@ -42,7 +42,7 @@
       padding-left: 2.25rem;
     }
     @include desktop {
-      width: 67%;
+      width: 74%;
       margin-right: 0;
     }
   }
@@ -118,6 +118,17 @@
       color: $primary-silver;
       @include tablet {
         width: 20%;
+        display: none;
+      }
+    }
+    &-tablet {
+      @include mobile-labels-buttons;
+      font-size: 0.75rem;
+      color: $primary-silver;
+      display: none;
+      @include tablet {
+        width: 20%;
+        display: block;
       }
     }
   }
@@ -125,6 +136,13 @@
   &__buy {
     @include tablet {
       margin-top: 0;
+    }
+    &--none {
+      display: none;
+      @include tablet {
+        display: block;
+        visibility: hidden;
+      }
     }
   }
   &__date {
@@ -134,8 +152,4 @@
 
 .box-selected {
   background-color: $secondary-mercury;
-}
-
-.display--none {
-  display: none;
 }

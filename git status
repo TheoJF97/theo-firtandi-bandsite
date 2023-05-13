@@ -1,0 +1,101 @@
+[33mcommit f35c70517ea4a14d303cc1a8dc7b391d00ea2aaa[m[33m ([m[1;36mHEAD -> [m[1;32msprint-3[m[33m, [m[1;31morigin/sprint-3[m[33m)[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Thu May 11 16:51:23 2023 -0400
+
+    Fix auto margin in desktop viewport
+
+[33mcommit 767e9022b5c9c6c153023c29b0d8d812e071b780[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Wed May 10 08:31:12 2023 -0400
+
+    Add div via DOM for Shows styling
+
+[33mcommit 3b2f4367b33b95ce0c7c40c91dcb5883a0085f63[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Wed May 10 07:09:46 2023 -0400
+
+    Fix hero display in desktop viewport
+
+[33mcommit 65a88e651538c0c273a9ba029f8a15f6ae819e75[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Tue May 9 18:17:32 2023 -0400
+
+    Sort comments by date and refactor array variable
+
+[33mcommit 2252f69caa38258cd3ebddfdafc99417ef3ac3ad[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Tue May 9 17:18:09 2023 -0400
+
+    Refactor comment functions and API functionality
+
+[33mcommit 68ef734df90b8d004a752bfd9895298129eb0dcc[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Tue May 9 15:34:55 2023 -0400
+
+    Fix API Key
+
+[33mcommit 05b2ca32f718adce79bd5b4f24fd56eb1493ce1c[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Tue May 9 09:24:52 2023 -0400
+
+    Implement axios to GET and POST comment API
+
+[33mcommit 6a860b686de750b4e02fd8515303008ccedec13a[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Mon May 8 17:20:45 2023 -0400
+
+    Connect comment API to my JS
+
+[33mcommit 60231a6ae9b64daa228cccf097657b6e14c42df6[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Mon May 8 08:29:05 2023 -0400
+
+    Add descriptive alt texts for accessibility
+
+[33mcommit 8bb313a9668338a3190746effd2f80f4543eebbd[m[33m ([m[1;31morigin/sprint-2[m[33m, [m[1;32msprint-2[m[33m, [m[1;32mmain[m[33m)[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Sun May 7 21:33:01 2023 -0400
+
+    Amend bug and styling errors
+
+[33mcommit 9b5e7dcfe5fa3f4e4f1c25e3aca311f9ad092adc[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Sun May 7 13:40:18 2023 -0400
+
+    Add JS functionality for comments and shows
+
+[33mcommit 41199d2ce3a94e0171e6feb91fb528940da99a04[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Fri May 5 16:35:02 2023 -0400
+
+    Complete JavaScript for adding comments
+
+[33mcommit 03378a7d9c1f38aed7ae1209ec110cccd30ff534[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Thu May 4 20:56:26 2023 -0400
+
+    Add skeleton and basic styling of pages
+
+[33mcommit 53d7e283ca9f5c653a76e654b248a49468b71cdf[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Mon May 1 16:57:17 2023 -0400
+
+    Initial commit on second branch
+
+[33mcommit af4a3f9bd314e1d9d3bff9b3575c194b0f5a0cfa[m[33m ([m[1;31morigin/sprint-1[m[33m, [m[1;31morigin/main[m[33m, [m[1;32msprint-1[m[33m)[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Sun Apr 30 19:14:32 2023 -0400
+
+    Complete sprint 1 branch
+
+[33mcommit 7b07f1019e24f8f7e3e7c311b962a661bb6a95f9[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Mon Apr 24 17:05:41 2023 -0400
+
+    Initial commit for branch sprint-1
+
+[33mcommit 786785bdb68f918d8546fc41e61f232705d2a02f[m
+Author: Theophilus Firtandi <theophilus.josiah@hotmail.com>
+Date:   Mon Apr 24 16:53:12 2023 -0400
+
+    Initial commit

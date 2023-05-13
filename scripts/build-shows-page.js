@@ -55,6 +55,36 @@ showsSection.appendChild(showsAll);
 
 //Create function to load the default shows
 function loadDefaultShows(shows) {
+  //Create a box for the column titles
+  const showsBox = document.createElement("div");
+  showsBox.classList.add("shows-box");
+  // Append this showsBox to showsAll
+  showsAll.appendChild(showsBox);
+
+  //Create the date header
+  const dateHeader = document.createElement("h3");
+  dateHeader.classList.add("shows__date-tablet");
+  dateHeader.textContent = "DATE";
+  //Create the venue header
+  const venueHeader = document.createElement("h3");
+  venueHeader.classList.add("shows__venue-tablet");
+  venueHeader.textContent = "VENUE";
+  //Create the location header
+  const locationHeader = document.createElement("h3");
+  locationHeader.classList.add("shows__location-tablet");
+  locationHeader.textContent = "LOCATION";
+  //Create the buy tickets button to be made invisible
+  const buyButton = document.createElement("button");
+  buyButton.classList.add("shows__buy");
+  buyButton.textContent = "BUY TICKETS";
+  buyButton.classList.add("shows__buy--none");
+
+  //append
+  showsBox.appendChild(dateHeader);
+  showsBox.appendChild(venueHeader);
+  showsBox.appendChild(locationHeader);
+  showsBox.appendChild(buyButton);
+
   for (let i = 0; i < shows.length; i++) {
     //Create a box for each show
     const showsBox = document.createElement("div");
@@ -118,29 +148,30 @@ Create a function to hide field headers when viewport changes to
   tablet and above
 */
 //grab the headers to be hidden
-const headers = showsSection.querySelectorAll(
-  ".shows__date-header, .shows__venue-header, .shows__location-header"
-);
-//Create the function to handle the viewport change
-function handleViewportChange() {
-  if (window.innerWidth > 767) {
-    headers.forEach((header) => header.classList.add("display--none"));
-  } else {
-    headers.forEach((header) => header.classList.remove("display--none"));
-  }
-}
+// const headers = showsSection.querySelectorAll(
+//   ".shows__date-header, .shows__venue-header, .shows__location-header"
+// );
+// //Create the function to handle the viewport change
+// function handleViewportChange() {
+//   if (window.innerWidth > 767) {
+//     headers.forEach((header) => header.classList.add("display--none"));
+//   } else {
+//     headers.forEach((header) => header.classList.remove("display--none"));
+//   }
+// }
 
-//Add in the event listner upon resizing, then invoke the function
-window.addEventListener("resize", handleViewportChange);
-handleViewportChange();
+// //Add in the event listner upon resizing, then invoke the function
+// window.addEventListener("resize", handleViewportChange);
+// handleViewportChange();
 
 /*
 Create an event listener where upon click, 
 the selected box styling is applied
 */
+//Call all shows-box elements
 const showsBoxEls = document.querySelectorAll(".shows-box");
 
-// Create an
+// Create the event listener to add class when selected and remove
 showsBoxEls.forEach((showsBoxEl) => {
   showsBoxEl.addEventListener("click", () => {
     document.querySelector(".box-selected")?.classList.remove("box-selected");
