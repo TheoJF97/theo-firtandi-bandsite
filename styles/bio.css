@@ -44,14 +44,14 @@
   padding-left: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
     padding: 0 2.25rem;
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 .hero-img-overlay {
@@ -71,13 +71,13 @@
 .shows__buy {
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.9375rem;
   background-color: #323232;
   color: #ffffff;
-  height: 40px;
+  height: 2.5rem;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -90,7 +90,7 @@
 @media screen and (min-width: 768px) {
   .comment__button,
   .shows__buy {
-    max-width: 150px;
+    max-width: 9.375rem;
   }
 }
 
@@ -115,7 +115,6 @@
     margin-right: auto;
   }
 }
-
 .nav-bar__logo {
   padding-top: 1rem;
 }
@@ -124,14 +123,12 @@
     padding: 1.875rem 1.8125rem 0 1.5rem;
   }
 }
-
 .nav-bar-list {
   display: flex;
   justify-content: space-evenly;
   padding: 0;
   margin-bottom: 0;
 }
-
 .nav-bar__link {
   width: 50%;
   font-weight: 400;
@@ -140,7 +137,6 @@
   text-decoration: none;
   color: #ffffff;
 }
-
 .nav-bar-box {
   box-shadow: inset 0 0 0 0 #000000;
   padding: 0;
@@ -161,12 +157,11 @@
   color: #ffffff;
   box-shadow: inset 25rem 0 0 0 #000000;
 }
-
 .nav-bar-item {
   list-style-type: none;
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   font-weight: 400;
   color: #e1e1e1;
 }
@@ -174,15 +169,15 @@
   .nav-bar-item {
     font-size: 0.75rem;
     line-height: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
+    font-weight: 400;
     padding: 1rem;
   }
 }
 .nav-bar-item:hover {
   color: #ffffff;
 }
-
-.item--active {
+.nav-bar-item--active {
   font-weight: 700;
   color: #ffffff;
 }
@@ -234,7 +229,7 @@
 .footer__cta {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   margin: 0;
@@ -244,7 +239,7 @@
   .footer__cta {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
   }
@@ -288,14 +283,14 @@
   padding-bottom: 1rem;
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   font-weight: normal;
 }
 @media screen and (min-width: 768px) {
   .footer__copyright {
     font-size: 0.75rem;
     line-height: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     font-weight: 400;
   }
 }
@@ -355,7 +350,7 @@
   }
 }
 .contact__name {
-  font-weight: 700;
+  font-weight: 600;
 }
 .contact__email {
   text-decoration: none;
@@ -414,24 +409,36 @@
 .about__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
-  margin: 0;
+  margin: 0 0 -2.5rem 0;
 }
 @media screen and (min-width: 768px) {
   .about__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
+    margin: 0;
+  }
+}
+.about__concert {
+  width: 100%;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .about__concert {
+    padding: 0 3.75rem;
+    width: 85%;
   }
 }
 .about__quote {
   font-size: 0.8125rem;
   line-height: 1.375rem;
   font-weight: 600;
+  font-size: 0.875rem;
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -441,23 +448,26 @@
     line-height: 2rem;
     font-weight: 600;
     padding: 0 3.75rem;
+    font-size: 1.375rem;
+    margin-bottom: 8px;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__quote {
-    width: 59%;
-    padding-bottom: 16px;
+    width: 70%;
+    padding-bottom: 1rem;
   }
 }
 .about__bryan {
   font-size: 0.8125rem;
   line-height: 1.375rem;
   font-weight: 600;
+  font-size: 0.875rem;
 }
 @media screen and (min-width: 768px) {
   .about__bryan {
-    font-size: 16px;
-    margin-left: 60px;
+    font-size: 1rem;
+    margin-left: 3.75rem;
   }
 }
 .about__band-name {
@@ -483,7 +493,7 @@
 }
 @media screen and (min-width: 768px) {
   .about-band-description {
-    flex-direction: rfow;
+    flex-direction: row;
     padding: 0 3.75rem;
     padding-bottom: 16px;
   }
@@ -497,7 +507,6 @@
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .about__band-par {
@@ -508,18 +517,7 @@
 }
 @media screen and (min-width: 1280px) {
   .about__band-par {
-    padding-right: 92px;
-  }
-}
-
-.concert__img {
-  width: 100%;
-  margin-bottom: 16px;
-}
-@media screen and (min-width: 768px) {
-  .concert__img {
-    padding: 0 3.75rem;
-    width: 85%;
+    padding-right: 0.9375rem;
   }
 }
 
@@ -530,6 +528,7 @@
 @media screen and (min-width: 768px) {
   .photo-gallery {
     padding: 0 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -542,7 +541,7 @@
 .photo-gallery__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   margin: 0;
@@ -551,7 +550,7 @@
   .photo-gallery__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
   }
@@ -607,7 +606,7 @@
 .comment__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   padding-bottom: 0;
@@ -617,7 +616,7 @@
   .comment__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    font-weight: 700;
+    font-weight: 600;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
   }
@@ -680,6 +679,15 @@
     height: 3rem;
   }
 }
+.comment-avatar--mohan {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 2.3125rem;
+  background-color: #e1e1e1;
+}
+.comment-avatar--mohan[alt=user-mohan] {
+  background-image: none;
+}
 .comment-header {
   justify-content: space-between;
   margin-top: 1rem;
@@ -709,17 +717,6 @@
   width: 100%;
 }
 
-.avatar-mohan {
-  background-image: url(../assets/images/Mohan-muruge.jpg);
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-top: 2.125rem;
-  background-color: #e1e1e1;
-}
-.avatar-mohan[alt=user-mohan] {
-  background-image: none;
-}
-
 .input-form, .input__name, .input__comment {
   width: 100%;
 }
@@ -746,7 +743,7 @@
 }
 @media screen and (min-width: 768px) {
   .input__name {
-    height: 1rem;
+    height: 3rem;
   }
 }
 .input__comment {

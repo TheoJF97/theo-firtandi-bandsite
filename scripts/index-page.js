@@ -7,13 +7,10 @@ const commentsAll = document.querySelector(".comments-all");
 const nameInput = document.querySelector(".input__name");
 const commentInput = document.querySelector(".input__comment");
 
-//Declare my URL with API Key
-const url = `https://project-1-api.herokuapp.com/comments/?api_key=4f57abf7-56cd-439f-8f4b-a987331be0b4`;
-
 /*
 DISPLAY THE COMMENTS
 */
-//function displayComment() takes in one comment object as a parameter and displays it on the page using JS DOM
+//function displayComment() takes in one comment object as a parameter and displays it on the DOM
 function displayComment(comment) {
   console.log(comment);
   const dividerLine = document.createElement("div");
@@ -60,6 +57,10 @@ function displayComment(comment) {
 /*
 Use AXIOS to GET my API and load all comments 
 */
+
+//Declare my URL with API Key
+const url = `https://project-1-api.herokuapp.com/comments/?api_key=4f57abf7-56cd-439f-8f4b-a987331be0b4`;
+
 function loadAllComments() {
   axios
     .get(url)
@@ -68,9 +69,7 @@ function loadAllComments() {
       console.log(comments);
 
       // Sort comments by date
-      comments.sort(
-        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
-      );
+      comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
       // Clear all the comments
       commentsAll.innerHTML = "";
@@ -130,7 +129,8 @@ avatarEls.forEach((avatarEl) => {
   avatarEl.addEventListener("error", () => {
     avatarEl.style.backgroundImage = "none";
     avatarEl.style.backgroundColor = "#e1e1e1";
-    avatarEl.alt = "";
+    avatarEl.alt = "no-avatar";
+    //set src to transparent png image that hides the broken image icon
     avatarEl.src =
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAIAAOeAuvpTAAAAABJRU5ErkJggg==";
   });

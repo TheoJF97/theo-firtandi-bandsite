@@ -12,12 +12,14 @@
   @include tablet {
     height: 500px;
   }
+
   &-img-overlay {
     height: 185px;
     @include tablet {
       height: 500px;
     }
   }
+
   &__title {
     @include desktop {
       @include desktop-margin;
@@ -34,35 +36,53 @@
   @include desktop {
     @include desktop-margin;
   }
+
   &__title {
     @include mobile-section-header;
     @include padding-mobile-headline;
-    margin: 0;
+    margin: 0 0 -2.5rem 0;
     @include tablet {
       @include desktop-tablet-section-header;
       @include padding-desktop-tablet-headline;
+      margin: 0;
     }
   }
+
+  &__concert {
+    width: 100%;
+    margin-bottom: 16px;
+    @include tablet {
+      @include padding-tablet-about;
+      width: 85%;
+    }
+  }
+
   &__quote {
     @include mobile-sub-header;
+    font-size: 0.875rem;
     margin-top: 0;
     margin-bottom: 5px;
     @include tablet {
       @include desktop-tablet-sub-header;
       @include padding-tablet-about;
+      font-size: 1.375rem;
+      margin-bottom: 8px;
     }
     @include desktop {
-      width: 59%;
-      padding-bottom: 16px;
+      width: 70%;
+      padding-bottom: 1rem;
     }
   }
+
   &__bryan {
     @include mobile-sub-header;
+    font-size: 0.875rem;
     @include tablet {
-      font-size: 16px;
-      margin-left: 60px;
+      font-size: 1rem;
+      margin-left: 3.75rem;
     }
   }
+
   &__band-name {
     @include mobile-sub-header;
     margin-bottom: 0;
@@ -73,11 +93,12 @@
       margin-bottom: 0;
     }
   }
+
   &-band-description {
     display: flex;
     flex-direction: column;
     @include tablet {
-      flex-direction: rfow;
+      flex-direction: row;
       @include padding-tablet-about;
       padding-bottom: 16px;
     }
@@ -85,24 +106,15 @@
       padding-right: 125px;
     }
   }
+
   &__band-par {
     @include mobile-body-copy;
-    font-weight: bold;
     @include tablet {
       @include desktop-tablet-body-copy;
     }
     @include desktop {
-      padding-right: 92px;
+      padding-right: 0.9375rem;
     }
-  }
-}
-
-.concert__img {
-  width: 100%;
-  margin-bottom: 16px;
-  @include tablet {
-    @include padding-tablet-about;
-    width: 85%;
   }
 }
 
@@ -112,12 +124,15 @@
   @include padding-mobile-component;
   @include tablet {
     @include padding-desktop-tablet-component;
+    padding-bottom: 2.25rem;
   }
+
   &-container {
     @include desktop {
       @include desktop-margin;
     }
   }
+
   &__title {
     @include mobile-section-header;
     @include padding-mobile-headline;
@@ -127,6 +142,7 @@
       @include padding-desktop-tablet-headline;
     }
   }
+
   &-box {
     display: flex;
     flex-direction: column;
@@ -137,6 +153,7 @@
       flex-wrap: wrap;
     }
   }
+
   &__img {
     width: 100%;
     padding-bottom: 16px;
@@ -160,10 +177,12 @@
   @include tablet {
     @include padding-desktop-tablet-component;
   }
+
   @include desktop {
     padding: 0 4rem;
     @include desktop-margin;
   }
+
   &__title {
     @include mobile-section-header;
     @include padding-mobile-headline;
@@ -174,6 +193,7 @@
       @include padding-desktop-tablet-headline;
     }
   }
+
   &-section,
   &-form,
   &-box,
@@ -182,6 +202,7 @@
   &-content {
     display: flex;
   }
+
   &-section,
   &-container {
     justify-content: center;
@@ -197,28 +218,34 @@
       width: 60%;
     }
   }
+
   &-container,
   &-header {
     align-items: center;
   }
+
   &-container {
     flex-direction: column;
   }
+
   &__button {
     align-self: flex-end;
     flex-shrink: 0;
   }
+
   &-box {
     margin-top: 1rem;
     @include tablet {
       margin: 1rem 0;
     }
   }
+
   &-form {
     width: 100%;
     padding-right: 0;
     border-bottom: 1px solid $secondary-mercury;
   }
+
   &-avatar {
     background-color: $secondary-mercury;
     width: 2.25rem;
@@ -231,24 +258,37 @@
       width: 3rem;
       height: 3rem;
     }
+    &--mohan {
+      object-fit: cover;
+      margin-top: 2.3125rem;
+      background-color: $secondary-mercury;
+      &[alt="user-mohan"] {
+        background-image: none;
+      }
+    }
   }
+
   &-header {
     justify-content: space-between;
     margin-top: 1rem;
   }
+
   &-input-comment,
   &-msg,
   &-name {
     color: $primary-black;
   }
+
   &-name {
     margin: 0;
     font-weight: bold;
   }
+
   &-date {
     color: $primary-silver;
     margin-left: 1rem;
   }
+
   &__button {
     margin-bottom: 1rem;
     @include tablet {
@@ -256,19 +296,10 @@
       margin: 1.375rem 0;
     }
   }
+
   &-content {
     flex-direction: column;
     width: 100%;
-  }
-}
-
-.avatar-mohan {
-  background-image: url(../assets/images/Mohan-muruge.jpg);
-  object-fit: cover;
-  margin-top: 2.125rem;
-  background-color: $secondary-mercury;
-  &[alt="user-mohan"] {
-    background-image: none;
   }
 }
 
@@ -278,10 +309,12 @@
   &__comment {
     width: 100%;
   }
+
   &-form {
     display: flex;
     flex-direction: column;
   }
+
   &__name {
     height: 0.125rem;
     border-radius: 0.25rem;
@@ -297,9 +330,10 @@
       color: $primary-black;
     }
     @include tablet {
-      height: 1rem;
+      height: 3rem;
     }
   }
+
   &__comment {
     background-color: $secondary-alabaster;
     border-radius: 0.3rem;
@@ -316,6 +350,7 @@
       border-color: $primary-black;
     }
   }
+
   &__label {
     text-transform: uppercase;
     color: $primary-silver;
@@ -323,6 +358,7 @@
     font-size: 0.75rem;
     padding: 1rem 0 0.4375rem 0;
   }
+
   &--error {
     border: 2px solid $error-state;
   }

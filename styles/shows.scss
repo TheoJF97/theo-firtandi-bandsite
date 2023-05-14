@@ -14,6 +14,7 @@
   @include tablet {
     height: 31.25rem;
   }
+
   &-img-overlay {
     height: 17.5625rem;
     @include tablet {
@@ -24,6 +25,7 @@
       justify-content: center;
     }
   }
+
   &__album-title {
     color: $primary-white;
     padding-left: 1rem;
@@ -35,6 +37,7 @@
       padding-left: 2.25rem;
     }
   }
+
   &__title {
     width: 71%;
     margin-top: 0;
@@ -46,6 +49,7 @@
       margin-right: 0;
     }
   }
+
   &__soundcloud {
     width: 90%;
     height: 7.4375rem;
@@ -58,6 +62,7 @@
       padding-left: 0;
     }
   }
+
   &-content {
     display: flex;
     flex-direction: column;
@@ -81,6 +86,7 @@
     justify-content: space-evenly;
     @include desktop-margin;
   }
+
   &__title {
     @include mobile-section-header;
     @include padding-mobile-headline;
@@ -92,9 +98,10 @@
       padding: 1rem 0 0 0;
     }
   }
+
   &-box {
     padding: 1rem;
-    &:hover:not(.box-selected) {
+    &:hover:not(.shows--selected) {
       background-color: $secondary-alabaster;
     }
     @include tablet {
@@ -106,6 +113,7 @@
       width: 46rem;
     }
   }
+
   &__date,
   &__venue,
   &__location {
@@ -145,11 +153,12 @@
       }
     }
   }
-  &__date {
-    font-weight: bold;
-  }
-}
 
-.box-selected {
-  background-color: $secondary-mercury;
+  &__date {
+    font-weight: 600;
+  }
+
+  &--selected {
+    background-color: $secondary-mercury;
+  }
 }

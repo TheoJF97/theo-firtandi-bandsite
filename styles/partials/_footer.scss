@@ -13,9 +13,11 @@
     @include padding-desktop-tablet-component;
     margin-top: 2rem;
   }
+
   @include desktop {
     padding: 0 4rem;
   }
+
   &-large-box {
     display: flex;
     flex-direction: column;
@@ -28,6 +30,7 @@
       @include desktop-margin;
     }
   }
+
   &-header-box {
     @include tablet {
       display: flex;
@@ -37,6 +40,7 @@
       order: -2;
     }
   }
+
   &__cta {
     @include mobile-section-header;
     @include padding-mobile-headline;
@@ -50,6 +54,7 @@
       padding-bottom: 0.625rem;
     }
   }
+
   &-socials {
     width: 8rem;
     display: flex;
@@ -64,12 +69,14 @@
       left: 14.3125rem;
     }
   }
+
   &-copyright__text {
     @include mobile-footer-copy;
     @include tablet {
       @include desktop-tablet-footer-copy;
     }
   }
+
   &__copyright {
     margin-bottom: 0;
     padding-bottom: 1rem;
@@ -83,6 +90,7 @@
       padding-top: 1rem;
     }
   }
+
   &-logo-box {
     padding-top: 2.1875rem;
     @include tablet {
@@ -106,6 +114,7 @@
       justify-content: flex-start;
     }
   }
+
   &-box {
     padding-top: 0.375rem;
     @include tablet {
@@ -115,6 +124,7 @@
       padding-right: 4.5rem;
     }
   }
+
   &__name,
   &__address,
   &__email {
@@ -123,9 +133,11 @@
       @include desktop-tablet-footer-copy;
     }
   }
+
   &__name {
-    font-weight: 700;
+    font-weight: 600;
   }
+
   &__email {
     text-decoration: none;
     color: $secondary-mercury;

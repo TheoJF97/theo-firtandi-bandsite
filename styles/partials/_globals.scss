@@ -27,6 +27,7 @@
   @include tablet {
     height: 80vh;
   }
+
   &__title {
     color: $primary-white;
     padding-left: 1rem;
@@ -36,6 +37,7 @@
       @include desktop-tablet-page-header;
     }
   }
+
   &-img-overlay {
     display: flex;
     align-items: center;
@@ -55,17 +57,19 @@
   font-size: 0.9375rem;
   background-color: $primary-black;
   color: $primary-white;
-  height: 40px;
+  height: 2.5rem;
   width: 100%;
-  border-radius: 4px;
+  border-radius: .25rem;
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
   &:hover {
     background-color: $secondary-darkblack;
   }
+
   @include tablet {
-    max-width: 150px;
+    max-width: 9.375rem;
   }
 }

@@ -32,7 +32,10 @@ let showsArray = [
   },
 ];
 
-//To Generate the section shows and h1 while still keeping showsSection in global scope
+/*
+To generate the shows title and section in the global scope for further use 
+*/
+//Select hero and footer, place shows section in between the two
 const hero = document.querySelector(".hero");
 const footer = document.querySelector(".footer");
 
@@ -53,6 +56,10 @@ showsAll.classList.add("shows-all");
 //showsSection.appendChild(showsAll)
 showsSection.appendChild(showsAll);
 
+/*
+Create an event listener where upon click, 
+the selected box styling is applied
+*/
 //Create function to load the default shows
 function loadDefaultShows(shows) {
   //Create a box for the column titles
@@ -144,27 +151,6 @@ function loadDefaultShows(shows) {
 loadDefaultShows(showsArray);
 
 /*
-Create a function to hide field headers when viewport changes to 
-  tablet and above
-*/
-//grab the headers to be hidden
-// const headers = showsSection.querySelectorAll(
-//   ".shows__date-header, .shows__venue-header, .shows__location-header"
-// );
-// //Create the function to handle the viewport change
-// function handleViewportChange() {
-//   if (window.innerWidth > 767) {
-//     headers.forEach((header) => header.classList.add("display--none"));
-//   } else {
-//     headers.forEach((header) => header.classList.remove("display--none"));
-//   }
-// }
-
-// //Add in the event listner upon resizing, then invoke the function
-// window.addEventListener("resize", handleViewportChange);
-// handleViewportChange();
-
-/*
 Create an event listener where upon click, 
 the selected box styling is applied
 */
@@ -174,7 +160,7 @@ const showsBoxEls = document.querySelectorAll(".shows-box");
 // Create the event listener to add class when selected and remove
 showsBoxEls.forEach((showsBoxEl) => {
   showsBoxEl.addEventListener("click", () => {
-    document.querySelector(".box-selected")?.classList.remove("box-selected");
-    showsBoxEl.classList.add("box-selected");
+    document.querySelector(".shows--selected")?.classList.remove("shows--selected");
+    showsBoxEl.classList.add("shows--selected");
   });
 });
